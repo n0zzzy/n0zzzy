@@ -15,6 +15,8 @@
 
 <img src="./assets/panel-whoami-v2.svg" width="100%" alt="whoami: Russel Carlo, NU Fairview IT, AWS Certified AI Practitioner, Microsoft Fabric Data Engineer Associate" />
 
+<img src="./assets/panel-achievements.svg" width="100%" alt="Achievements unlocked: Hackathon Champion, AWS Certified, Microsoft Certified, AWS AI & ML Scholar, Multi-Agent Architect, Agentic Coder" />
+
 <img src="./assets/h-wins.svg" width="100%" alt="Wins" />
 
 <p align="center">

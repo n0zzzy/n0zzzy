@@ -441,6 +441,44 @@ def patterns():
     return frame(w, h, "SYS://ORCHESTRATION", "".join(parts), u)
 
 
+ACH_GLYPHS = {
+    "trophy": '<path d="M7 3h10v4a5 5 0 0 1-10 0z" fill="#fff"/><path d="M5 4H3v2a3 3 0 0 0 4 2.8M19 4h2v2a3 3 0 0 1-4 2.8" fill="none" stroke="#fff" stroke-width="1.6"/><rect x="10.5" y="12" width="3" height="4" fill="#fff"/><rect x="7" y="16" width="10" height="3" rx="1" fill="#fff"/>',
+    "cloud": ICONS["cloud"],
+    "ms": ICONS["ms"],
+    "cap": '<path d="M12 4L1 9l11 5 9-4.1V16h2V9z" fill="#fff"/><path d="M5 12.2V16c0 1.7 3.1 3 7 3s7-1.3 7-3v-3.8l-7 3.2z" fill="#fff"/>',
+    "nodes": '<path d="M12 6v5M12 11L5 18M12 11l7 7M12 11v7" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="5" r="3" fill="#fff"/><circle cx="5" cy="19" r="2.4" fill="#fff"/><circle cx="12" cy="19" r="2.4" fill="#fff"/><circle cx="19" cy="19" r="2.4" fill="#fff"/>',
+    "term": '<rect x="2" y="4" width="20" height="16" rx="2" fill="none" stroke="#fff" stroke-width="1.8"/><path d="M6 9l3 3-3 3M11 15h6" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"/>',
+}
+
+ACHIEVEMENTS = [
+    ("trophy", "Hackathon Champion", "Rank 1 · AWS QuickQuest", "LEGENDARY"),
+    ("cloud", "AWS Certified", "AI Practitioner", "EPIC"),
+    ("ms", "Microsoft Certified", "Fabric Data Engineer", "EPIC"),
+    ("cap", "AWS AI & ML Scholar", "top 4,500 globally", "EPIC"),
+    ("nodes", "Multi-Agent Architect", "6 orchestration patterns", "RARE"),
+    ("term", "Agentic Coder", "Claude Code · Codex · Kiro", "RARE"),
+]
+
+
+def achievements():
+    w, h, u = 1000, 190, "ach"
+    tw, gap = 152, 9
+    parts = []
+    for i, (g, title, sub, rarity) in enumerate(ACHIEVEMENTS):
+        x, y = 24 + i * (tw + gap), 48
+        legendary = rarity == "LEGENDARY"
+        cls = f'class="pulse{u}"' if legendary else ""
+        fill = "#2a0a0c" if legendary else "#0d1117"
+        parts.append(f'<rect x="{x}" y="{y}" width="{tw}" height="124" rx="8" fill="{fill}" fill-opacity="0.95" stroke="{RED}" stroke-opacity="{0.9 if legendary else 0.3}" {cls}/>')
+        parts.append(f'<polygon points="{x + tw / 2},{y + 10} {x + tw / 2 + 24},{y + 24} {x + tw / 2 + 24},{y + 52} {x + tw / 2},{y + 66} {x + tw / 2 - 24},{y + 52} {x + tw / 2 - 24},{y + 24}" fill="{RED}"/>')
+        parts.append(f'<g transform="translate({x + tw / 2 - 12}, {y + 26})">{ACH_GLYPHS[g]}</g>')
+        parts.append(f'<text x="{x + tw / 2}" y="{y + 86}" text-anchor="middle" style="font: 700 12.5px {FONT}; fill: {TEXT}">{escape(title)}</text>')
+        parts.append(f'<text x="{x + tw / 2}" y="{y + 102}" text-anchor="middle" class="b{u}" style="font-size:10.5px">{escape(sub)}</text>')
+        parts.append(f'<text x="{x + tw / 2}" y="{y + 117}" text-anchor="middle" class="m{u}" fill="{PINK if legendary else RED}" style="font-size:9.5px; font-weight:700; letter-spacing:1.5px">◆ {rarity}</text>')
+    parts.append(f'<text x="{w - 24}" y="28" text-anchor="end" class="m{u}" fill="{MUTED}" style="font-size:11px">6 / 6 unlocked</text>')
+    return frame(w, h, "ACHIEVEMENTS://UNLOCKED", "".join(parts), u)
+
+
 WOLF = "M28 -4 C 46 4, 62 18, 72 28 L 78 25 L 90 8 L 94 24 L 97 36 C 104 44, 108 52, 112 60 L 120 64 L 117 70 L 126 76 L 121 81 L 130 90 C 150 120, 172 160, 172 200 C 190 204, 206 222, 206 252 C 190 246, 176 246, 162 254 L 160 258 L 84 258 C 72 258, 70 248, 82 246 C 84 220, 84 196, 82 176 C 80 156, 74 138, 66 122 L 70 116 L 62 110 L 66 104 L 58 98 C 54 86, 52 76, 50 66 C 46 54, 40 44, 32 34 L 14 14 L 40 24 L 24 2 Z"
 
 
@@ -482,6 +520,7 @@ def main():
         "h-certs.svg": heading("certs", "Certifications", "02"),
         "h-arsenal.svg": heading("ars", "Arsenal", "03"),
         "h-agentic.svg": heading("agentic", "Agentic Engineering", "04"),
+        "panel-achievements.svg": achievements(),
         "panel-harness.svg": harness(),
         "panel-roles.svg": roles(),
         "panel-patterns.svg": patterns(),
