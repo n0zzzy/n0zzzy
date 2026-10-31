@@ -115,20 +115,19 @@ philosophy: "I have no enemies."
 
 <div align="center">
 
-<img src="https://raw.githubusercontent.com/n0zzzy/n0zzzy/output/stats.svg" width="49%" alt="GitHub stats" />
-<img src="https://raw.githubusercontent.com/n0zzzy/n0zzzy/output/langs.svg" width="49%" alt="Top languages" />
+<img src="./generated/stats.svg" width="49%" alt="GitHub stats" />
+<img src="./generated/langs.svg" width="49%" alt="Top languages" />
+
+<img src="./generated/activity.svg" width="98%" alt="Contribution activity" />
 
 <img src="https://streak-stats.demolab.com?user=n0zzzy&theme=dark&hide_border=true&background=0D1117&ring=DC2626&fire=DC2626&currStreakLabel=DC2626&sideLabels=FFFFFF&dates=8B949E&currStreakNum=FFFFFF&sideNums=FFFFFF" width="98%" alt="GitHub streak" />
 
 <br/><br/>
 
-<picture>
-  <source media="(prefers-color-scheme: dark)" srcset="https://raw.githubusercontent.com/n0zzzy/n0zzzy/output/github-snake-dark.svg" />
-  <img alt="contribution snake" src="https://raw.githubusercontent.com/n0zzzy/n0zzzy/output/github-snake.svg" />
-</picture>
+<img src="./generated/github-snake-dark.svg" width="100%" alt="contribution snake" />
 
 <br/>
 
-<sub>🐺 <i>"I have no enemies."</i> — widgets self-generated daily via GitHub Actions</sub>
+<sub>🐺 <i>"I have no enemies."</i> — widgets self-generated every 6 hours via GitHub Actions</sub>
 
 </div>

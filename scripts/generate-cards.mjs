@@ -31,7 +31,10 @@ const data = await gql(
       createdAt
       followers { totalCount }
       contributionsCollection {
-        contributionCalendar { totalContributions }
+        contributionCalendar {
+          totalContributions
+          weeks { contributionDays { date contributionCount } }
+        }
         totalCommitContributions
         totalPullRequestContributions
         totalIssueContributions
@@ -154,7 +157,43 @@ const langsSvg = frame(
 ${langRows}`
 );
 
+// --- activity graph (last 31 days) ---
+const days = cc.contributionCalendar.weeks.flatMap((w) => w.contributionDays).slice(-31);
+const AW = 990, AH = 300, PL = 50, PR = 25, PT = 70, PB = 45;
+const maxC = Math.max(4, ...days.map((d) => d.contributionCount));
+const step = (AW - PL - PR) / (days.length - 1);
+const pts = days.map((d, i) => [PL + i * step, PT + (1 - d.contributionCount / maxC) * (AH - PT - PB)]);
+const line = pts.map(([px, py], i) => `${i ? "L" : "M"}${px.toFixed(1)} ${py.toFixed(1)}`).join(" ");
+const area = `${line} L${pts.at(-1)[0].toFixed(1)} ${AH - PB} L${PL} ${AH - PB} Z`;
+const total31 = days.reduce((s, d) => s + d.contributionCount, 0);
+const gridLines = [0, 0.25, 0.5, 0.75, 1]
+  .map((f) => {
+    const gy = PT + f * (AH - PT - PB);
+    return `<line x1="${PL}" y1="${gy}" x2="${AW - PR}" y2="${gy}" stroke="${BORDER}" stroke-dasharray="3 4"/>
+<text x="${PL - 10}" y="${gy + 4}" class="l" text-anchor="end">${Math.round(maxC * (1 - f))}</text>`;
+  })
+  .join("\n");
+const xLabels = days
+  .map((d, i) => (i % 5 === 0 || i === days.length - 1 ? `<text x="${pts[i][0]}" y="${AH - PB + 22}" class="l" text-anchor="middle">${d.date.slice(5).replace("-", "/")}</text>` : ""))
+  .join("");
+const dots = pts
+  .map(([px, py], i) => (days[i].contributionCount ? `<circle cx="${px}" cy="${py}" r="3.5" fill="${BG}" stroke="${RED}" stroke-width="2"/>` : ""))
+  .join("");
+const activitySvg = frame(
+  AW,
+  AH,
+  `contribution activity // last 31 days — ${total31} contributions`,
+  `<defs><linearGradient id="af" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${RED}" stop-opacity="0.45"/><stop offset="1" stop-color="${RED}" stop-opacity="0"/></linearGradient></defs>
+${gridLines}
+<path d="${area}" fill="url(#af)"/>
+<path d="${line}" fill="none" stroke="${RED}" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="4000" style="animation: draw 2s ease-out"/>
+${dots}
+${xLabels}
+<style>@keyframes draw { from { stroke-dashoffset: 4000; } to { stroke-dashoffset: 0; } }</style>`
+);
+
 mkdirSync(outDir, { recursive: true });
 writeFileSync(`${outDir}/stats.svg`, statsSvg);
 writeFileSync(`${outDir}/langs.svg`, langsSvg);
-console.log(`Wrote ${outDir}/stats.svg and ${outDir}/langs.svg`);
+writeFileSync(`${outDir}/activity.svg`, activitySvg);
+console.log(`Wrote stats.svg, langs.svg, activity.svg to ${outDir}`);
