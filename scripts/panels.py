@@ -220,7 +220,7 @@ ARSENAL = [
 
 
 AI_TOOLS = [
-    ("Claude", "si", "claude", None),
+    ("Claude Code", "si", "claude", None),
     ("Codex", "glyph", '<path d="M4 7l5 5-5 5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 17h8" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>', None),
     ("Gemini", "si", "googlegemini", None),
     ("Antigravity", "glyph", '<path d="M5 14l7-7 7 7M5 20l7-7 7 7" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>', None),
@@ -526,7 +526,7 @@ def main():
         "panel-patterns.svg": patterns(),
         "h-builds-v2.svg": heading("builds", "Featured Builds", "05"),
         "h-stats-v2.svg": heading("stats", "Stats", "06"),
-        "panel-arsenal-v3.svg": arsenal(),
+        "panel-arsenal-v4.svg": arsenal(),
         "panel-flow-v2.svg": workflow(),
         "build-1.svg": build(1, "kiro-sdlc-agent-harness", "An orchestrator drives 7 specialist AI agents through the full SDLC, from a plain-English request to a live, deployed AWS app, with human approval gates.", ["Kiro", "Multi-Agent", "AWS", "Terraform"], True),
         "build-2.svg": build(2, "novamart-multi-agent-agentcore", "5-agent customer support with parallel multi-agent RAG, guardrails, shared state, and CloudWatch/X-Ray observability on Bedrock AgentCore.", ["Python", "AgentCore", "Strands", "RAG"]),
