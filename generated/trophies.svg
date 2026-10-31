@@ -1,17 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" width="990" height="215" viewBox="0 0 990 215">
+<defs>
+  <linearGradient id="cbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#06080c"/><stop offset=".6" stop-color="#0b0a10"/><stop offset="1" stop-color="#1c0609"/></linearGradient>
+  <radialGradient id="cglow" cx="1" cy="0" r=".9"><stop offset="0" stop-color="#dc2626" stop-opacity=".25"/><stop offset="1" stop-color="#dc2626" stop-opacity="0"/></radialGradient>
+  <pattern id="cgrid" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0 L0 0 0 26" fill="none" stroke="#dc2626" stroke-opacity=".07"/></pattern>
+  <pattern id="cscan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity=".35"/></pattern>
+  <clipPath id="cclip"><rect width="990" height="215" rx="10"/></clipPath>
+</defs>
 <style>
-  .t { font: 600 16px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #dc2626; }
+  .t { font: 600 11px 'Fira Code', Consolas, monospace; fill: #dc2626; letter-spacing: 2px; text-transform: uppercase; }
   .l { font: 400 13px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #8b949e; }
   .v { font: 700 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #e6edf3; }
   .big { font: 800 40px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #e6edf3; }
   .fade { animation: fade .6s ease-out; }
+  .sweep { animation: sweep 5s linear infinite; }
+  .pulse { animation: pulse 2.6s ease-in-out infinite; }
   @keyframes fade { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: none; } }
   @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
   @keyframes ring { from { stroke-dashoffset: 251; } }
+  @keyframes sweep { from { transform: translateY(-40px); } to { transform: translateY(255px); } }
+  @keyframes pulse { 50% { stroke-opacity: .25; } }
 </style>
-<rect x="0.5" y="0.5" width="989" height="214" rx="10" fill="#0d1117" stroke="#30363d"/>
-<rect x="0.5" y="0.5" width="4" height="214" rx="2" fill="#dc2626"/>
-<text x="25" y="34" class="t">trophies</text>
+<g clip-path="url(#cclip)">
+  <rect width="990" height="215" fill="url(#cbg)"/>
+  <rect width="990" height="215" fill="url(#cgrid)"/>
+  <rect width="990" height="215" fill="url(#cglow)"/>
+  <rect width="990" height="215" fill="url(#cscan)"/>
+  <rect class="sweep" width="990" height="40" fill="#dc2626" fill-opacity=".05"/>
+</g>
+<rect x=".5" y=".5" width="989" height="214" rx="10" fill="none" stroke="#dc2626" stroke-opacity=".45" class="pulse"/>
+<g stroke="#dc2626" stroke-width="3" fill="none"><path d="M2 20 V2 H20"/><path d="M970 2 H988 V20"/><path d="M2 195 V213 H20"/><path d="M970 213 H988 V195"/></g>
+<text x="25" y="32" class="t">trophies</text>
 <style>.glow { animation: glow 2.5s ease-in-out infinite; } @keyframes glow { 50% { stroke-opacity: .3; } }</style>
 <g transform="translate(95, 105)">
   <polygon points="0.0,-44.0 38.1,-22.0 38.1,22.0 0.0,44.0 -38.1,22.0 -38.1,-22.0" fill="none" stroke="#dc2626" stroke-width="2" />
