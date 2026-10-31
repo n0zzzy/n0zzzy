@@ -34,11 +34,38 @@
 
 <img src="./assets/h-arsenal.svg" width="100%" alt="Arsenal" />
 
-<img src="./assets/panel-arsenal-v2.svg" width="100%" alt="Tech stack: AI / agentic coding with Claude, Codex, Gemini, Antigravity, Ollama, OpenRouter, OpenCode, OmniRoute, Kiro; AWS, Azure, Docker, Kubernetes, Terraform, GitHub Actions, Linux, Python, TypeScript, JavaScript, Kotlin, React, Next.js, Tailwind, Node.js, Express, PostgreSQL, MongoDB, Firebase, Vercel" />
+<img src="./assets/panel-arsenal-v3.svg" width="100%" alt="Tech stack: AI / agentic coding with Claude, Codex, Gemini, Antigravity, Ollama, OpenRouter, OpenCode, OmniRoute, VS Code, Kiro; AWS, Azure, Docker, Kubernetes, Terraform, GitHub Actions, Linux, Python, TypeScript, JavaScript, Kotlin, React, Next.js, Tailwind, Node.js, Express, PostgreSQL, MongoDB, Firebase, Vercel" />
 
-<img src="./assets/h-flow.svg" width="100%" alt="Agentic Workflow" />
+<img src="./assets/h-agentic.svg" width="100%" alt="Agentic Engineering" />
 
-<img src="./assets/panel-flow.svg" width="100%" alt="Agentic workflow: Kiro specs → Claude Code, Codex, OpenCode, Antigravity build → OpenRouter, Ollama, OmniRoute, Gemini models → Playwright, pytest, evals → GitHub Actions, Terraform, AWS" />
+<img src="./assets/panel-flow-v2.svg" width="100%" alt="Agentic workflow: Kiro + VS Code specs, Claude Code / Codex / OpenCode / Antigravity build, OpenRouter / Ollama / OmniRoute / Gemini models, Playwright / pytest / evals test, GitHub Actions + Terraform ship to AWS" />
+
+<img src="./assets/panel-harness.svg" width="100%" alt="Harness engineering: guardrails, human-in-the-loop, evaluation, observability, tools/MCP, memory, knowledge/RAG, permissions around an agent core loop" />
+
+<img src="./assets/panel-roles.svg" width="100%" alt="Agent roles and models: orchestrator Claude Haiku 4.5, specialists Claude Sonnet 4.5, LLM-as-a-judge Claude Sonnet 4.5, Amazon Nova Lite, Qwen 2.5 3B on vLLM, gpt-4.1-mini, Titan Embed v2 and MiniLM embeddings, Claude Code and Codex for coding" />
+
+<img src="./assets/panel-patterns.svg" width="100%" alt="Orchestration patterns: supervisor-specialists, agent-to-agent, parallel fan-out, event-driven choreography, router/classifier, human-gated pipeline" />
+
+<details>
+<summary><b>📖 Agentic engineering glossary</b> (click to expand)</summary>
+
+<br/>
+
+| Term | What it means |
+|---|---|
+| **Harness engineering** | Everything built *around* the model so an agent is reliable in production: tools, memory, guardrails, evals, observability, permissions, and human checkpoints. |
+| **Guardrails** | Input/output filters that block unsafe content, PII leaks, and prompt-injection attempts (e.g. Amazon Bedrock Guardrails). |
+| **Human-in-the-loop (HITL)** | The agent pauses and waits for a person to approve or reject a risky step, e.g. a deploy or a high-value booking. |
+| **Evaluation / LLM-as-a-Judge** | Automatically scoring agent answers (correctness, goal success, tool choice), often with a stronger model acting as the grader. |
+| **Observability** | Traces, logs, and metrics for every agent step (OpenTelemetry, Langfuse, CloudWatch, X-Ray) so failures can be debugged. |
+| **MCP (Model Context Protocol)** | An open standard for plugging tools and data sources into agents. |
+| **A2A (Agent-to-Agent)** | A protocol for agents to discover and call each other across services. |
+| **RAG** | Retrieval-Augmented Generation: the agent searches a knowledge base first, then answers grounded in what it found. |
+| **Orchestration vs. choreography** | Orchestration: one controller tells each agent what to do. Choreography: agents react to events on a shared bus with no central boss. |
+| **Router / classifier** | A first step that labels a request and sends it to the right specialist or flow. |
+| **Agentic coding** | Using coding agents (Claude Code, Codex, Kiro) to plan, write, test, and ship software under human review. |
+
+</details>
 
 <img src="./assets/h-builds-v2.svg" width="100%" alt="Featured Builds" />
 

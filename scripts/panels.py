@@ -228,6 +228,7 @@ AI_TOOLS = [
     ("OpenRouter", "si", "openrouter", "ffffff"),
     ("OpenCode", "si", "opencode", "ffffff"),
     ("OmniRoute", "glyph", '<path d="M12 12L5 6M12 12l7-6M12 12v8" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="#dc2626" stroke="#fff" stroke-width="1.5"/><circle cx="5" cy="6" r="2.4" fill="#fff"/><circle cx="19" cy="6" r="2.4" fill="#fff"/><circle cx="12" cy="20" r="2.4" fill="#fff"/>', None),
+    ("VS Code", "sk", "vscode", None),
     ("Kiro", "glyph", '<path d="M6 21V10a6 6 0 0 1 12 0v11l-2-1.6-2 1.6-2-1.6-2 1.6-2-1.6z" fill="#fff"/><circle cx="10" cy="11" r="1.4" fill="#0d1117"/><circle cx="14" cy="11" r="1.4" fill="#0d1117"/>', None),
 ]
 
@@ -256,9 +257,12 @@ def arsenal():
     rows.append(f'<text x="44" y="{top + 40}" class="tag{u}" style="font-size:12px">AI / AGENTIC</text>')
     rows.append(f'<text x="44" y="{top + 58}" class="m{u}" fill="{MUTED}" style="font-size:10.5px">agentic coding stack</text>')
     for j, (label, kind, data, color) in enumerate(AI_TOOLS):
-        x, y = 250 + j * 76, top + 10
+        x, y = 230 + j * 72, top + 10
         rows.append(f'<rect x="{x}" y="{y}" width="{size}" height="{size}" rx="12" fill="#1c2128" stroke="{RED}" stroke-opacity="0.35"/>')
-        if kind == "si":
+        if kind == "sk":
+            src = _fetch(f"https://skillicons.dev/icons?i={data}&theme=dark")
+            rows.append(f'<image x="{x}" y="{y}" width="{size}" height="{size}" href="data:image/svg+xml;base64,{src}"/>')
+        elif kind == "si":
             src = _fetch(f"https://cdn.simpleicons.org/{data}" + (f"/{color}" if color else ""))
             rows.append(f'<image x="{x + 12}" y="{y + 12}" width="28" height="28" href="data:image/svg+xml;base64,{src}"/>')
         else:
@@ -278,7 +282,7 @@ def arsenal():
 def workflow():
     w, h, u = 1000, 275, "flw"
     stages = [
-        ("01 · SPEC", "Kiro", "specs · steering · tasks"),
+        ("01 · SPEC", "Kiro · VS Code", "specs · steering · tasks"),
         ("02 · BUILD", "Claude Code · Codex", "OpenCode · Antigravity"),
         ("03 · MODELS", "OpenRouter · Ollama", "OmniRoute · Gemini"),
         ("04 · TEST", "Playwright · pytest", "evals · security review"),
@@ -310,6 +314,131 @@ def workflow():
     parts.append(f'<text x="30" y="66" style="font: 400 13px {MONO}; fill: {MUTED}">$ how n0zzzy ships: <tspan fill="{PINK}">spec-driven, agent-built, human-approved</tspan><tspan class="blink{u}" fill="{RED}"> █</tspan></text>')
     parts.append(f'<text x="30" y="{h - 22}" style="font: 400 12px {MONO}; fill: {MUTED}">humans own the spec and the approve-deploy gate · agents do the rest</text>')
     return frame(w, h, "SYS://AGENTIC_WORKFLOW", "".join(parts), u)
+
+
+def harness():
+    w, h, u = 1000, 470, "hrn"
+    left = [
+        ("GUARDRAILS", "Bedrock Guardrails", "prompt-injection defense · PII"),
+        ("HUMAN-IN-THE-LOOP", "approval gates", "APPROVE DEPLOY · review queues"),
+        ("EVALUATION", "LLM-as-a-Judge", "AgentCore evals · eval datasets"),
+        ("OBSERVABILITY", "OpenTelemetry · Langfuse", "CloudWatch · X-Ray traces"),
+    ]
+    right = [
+        ("TOOLS / MCP", "AgentCore Gateway · MCP", "Code Interpreter · Browser"),
+        ("MEMORY", "session state", "semantic facts · summaries"),
+        ("KNOWLEDGE / RAG", "Bedrock KB · S3 Vectors", "Milvus · parallel retrieval"),
+        ("PERMISSIONS", "per-agent boundaries", "least-privilege IAM · JWT/OAuth"),
+    ]
+    tw, th, ty0, tgap = 300, 74, 92, 14
+    cx, cy = w / 2, ty0 + 2 * (th + tgap) - tgap / 2
+    parts = [f'<text x="30" y="62" style="font: 400 13px {MONO}; fill: {MUTED}">$ harness engineering: <tspan fill="{PINK}">what turns a chatbot into a production agent</tspan></text>']
+
+    def tile(x, y, tag, main, sub, side):
+        ex = x + tw if side == "L" else x
+        bend = -60 if side == "L" else 60
+        end = -92 if side == "L" else 92
+        parts.append(f'<path d="M{ex} {y + th / 2} C {cx + bend} {y + th / 2}, {cx + bend} {cy}, {cx + end} {cy}" fill="none" stroke="{RED}" stroke-opacity="0.4" stroke-width="1.5" class="flow{u}"/>')
+        parts.append(f'<rect x="{x}" y="{y}" width="{tw}" height="{th}" rx="8" fill="#0d1117" fill-opacity="0.95" stroke="{RED}" stroke-opacity="0.3"/>')
+        parts.append(f'<rect x="{x if side == "L" else x + tw - 4}" y="{y}" width="4" height="{th}" rx="2" fill="{RED}"/>')
+        parts.append(f'<text x="{x + 18}" y="{y + 24}" class="tag{u}">{escape(tag)}</text>')
+        parts.append(f'<text x="{x + 18}" y="{y + 46}" style="font: 700 14px {FONT}; fill: {TEXT}">{escape(main)}</text>')
+        parts.append(f'<text x="{x + 18}" y="{y + 64}" class="b{u}" style="font-size:12px">{escape(sub)}</text>')
+
+    for i, t in enumerate(left):
+        tile(28, ty0 + i * (th + tgap), *t, "L")
+    for i, t in enumerate(right):
+        tile(w - 28 - tw, ty0 + i * (th + tgap), *t, "R")
+    parts.append(f'<circle cx="{cx}" cy="{cy}" r="96" fill="none" stroke="{RED}" stroke-opacity="0.3" stroke-dasharray="3 7" class="spin{u}" style="transform-origin:{cx}px {cy}px"/>')
+    parts.append(f'<circle cx="{cx}" cy="{cy}" r="78" fill="#2a0a0c" stroke="{RED}" stroke-width="2" class="pulse{u}"/>')
+    parts.append(f'<text x="{cx}" y="{cy - 30}" text-anchor="middle" class="tag{u}">AGENT CORE</text>')
+    for k, line in enumerate(["↻ plan", "act · tools", "observe", "reflect"]):
+        parts.append(f'<text x="{cx}" y="{cy - 8 + k * 17}" text-anchor="middle" style="font: 600 13px {MONO}; fill: {TEXT if k % 2 == 0 else PINK}">{escape(line)}</text>')
+    parts.append(f'<text x="{cx}" y="{cy + 116}" text-anchor="middle" class="m{u}" fill="{MUTED}" style="font-size:11.5px">model via LiteLLM / OpenRouter</text>')
+    parts.append(
+        f"<style>.flow{u} {{ stroke-dasharray: 5 6; animation: fl{u} 1.2s linear infinite; }} @keyframes fl{u} {{ to {{ stroke-dashoffset: -11; }} }}"
+        f" .spin{u} {{ animation: sp{u} 18s linear infinite; }} @keyframes sp{u} {{ to {{ transform: rotate(360deg); }} }}</style>"
+    )
+    return frame(w, h, "SYS://HARNESS", "".join(parts), u)
+
+
+ROLES = [
+    ("Orchestrator / Router", "Claude Haiku 4.5", "fast, cheap routing + workflow state", "novamart"),
+    ("Specialist workers", "Claude Sonnet 4.5", "tool use · reasoning · temp 0.1", "novamart"),
+    ("LLM-as-a-Judge", "Claude Sonnet 4.5", "scores agent outputs in evals", "eks"),
+    ("Managed agent backbone", "Amazon Nova Lite", "low-cost Bedrock serving", "eks"),
+    ("Self-hosted agent", "Qwen 2.5 3B · vLLM", "open-source on AWS Inferentia", "eks"),
+    ("Tool-calling assistant", "gpt-4.1-mini", "Azure AI Foundry multi-tool", "azure"),
+    ("Embeddings / RAG", "Titan Embed v2 · MiniLM", "vector search & retrieval", "novamart · eks"),
+    ("Coding agents", "Claude Code · Codex", "agentic software delivery", "daily driver"),
+]
+
+
+def roles():
+    w, u = 1000, "rol"
+    rh, top = 40, 92
+    h = top + len(ROLES) * rh + 40
+    cols = [(40, "AGENT ROLE"), (300, "MODEL"), (540, "WHY THIS MODEL"), (850, "WHERE")]
+    parts = [f'<text x="30" y="62" style="font: 400 13px {MONO}; fill: {MUTED}">$ right model for the right role: <tspan fill="{PINK}">cost · latency · reasoning</tspan></text>']
+    parts.append(f'<rect x="24" y="{top - 8}" width="{w - 48}" height="30" rx="6" fill="#2a0a0c"/>')
+    for x, t in cols:
+        parts.append(f'<text x="{x}" y="{top + 12}" class="tag{u}">{t}</text>')
+    for i, (role, model, why, where) in enumerate(ROLES):
+        y = top + 28 + i * rh
+        parts.append(f'<rect x="24" y="{y}" width="{w - 48}" height="{rh - 6}" rx="6" fill="#0d1117" fill-opacity="{0.95 if i % 2 else 0.75}" stroke="{RED}" stroke-opacity="0.15"/>')
+        parts.append(f'<text x="40" y="{y + 22}" style="font: 600 14px {FONT}; fill: {TEXT}">{escape(role)}</text>')
+        parts.append(f'<rect x="294" y="{y + 7}" width="{len(model) * 7.8 + 22:.0f}" height="20" rx="10" fill="#1a0507" stroke="{RED}" stroke-opacity="0.7"/>')
+        parts.append(f'<text x="305" y="{y + 21}" class="m{u}" fill="{PINK}" style="font-size:12px; font-weight:700">{escape(model)}</text>')
+        parts.append(f'<text x="540" y="{y + 22}" class="b{u}">{escape(why)}</text>')
+        parts.append(f'<text x="850" y="{y + 22}" class="m{u}" fill="{MUTED}" style="font-size:11.5px">{escape(where)}</text>')
+    return frame(w, h, "SYS://ROLES_X_MODELS", "".join(parts), u)
+
+
+def _glyph(kind):
+    c, r_ = "#fca5a5", "#dc2626"
+
+    def n(x, y, r=5, f=r_):
+        return f'<circle cx="{x}" cy="{y}" r="{r}" fill="{f}"/>'
+
+    def ln(x1, y1, x2, y2):
+        return f'<line x1="{x1}" y1="{y1}" x2="{x2}" y2="{y2}" stroke="{c}" stroke-width="1.5"/>'
+
+    if kind == "sup":
+        return ln(30, 8, 10, 36) + ln(30, 8, 30, 36) + ln(30, 8, 50, 36) + n(30, 8, 7) + n(10, 36, 4, c) + n(30, 36, 4, c) + n(50, 36, 4, c)
+    if kind == "a2a":
+        return ln(10, 22, 30, 6) + ln(30, 6, 50, 22) + ln(10, 22, 30, 38) + ln(30, 38, 50, 22) + ln(10, 22, 50, 22) + n(10, 22) + n(50, 22) + n(30, 6, 4, c) + n(30, 38, 4, c)
+    if kind == "par":
+        return ln(6, 22, 28, 6) + ln(6, 22, 28, 38) + ln(28, 6, 54, 22) + ln(28, 38, 54, 22) + n(6, 22) + n(28, 6, 4, c) + n(28, 38, 4, c) + n(54, 22)
+    if kind == "evt":
+        return f'<rect x="4" y="18" width="52" height="8" rx="4" fill="{r_}"/>' + ln(14, 6, 14, 18) + ln(30, 26, 30, 38) + ln(46, 6, 46, 18) + n(14, 6, 4, c) + n(30, 38, 4, c) + n(46, 6, 4, c)
+    if kind == "rtr":
+        return ln(6, 22, 26, 22) + ln(26, 22, 52, 6) + ln(26, 22, 52, 22) + ln(26, 22, 52, 38) + f'<polygon points="26,12 36,22 26,32 16,22" fill="{r_}"/>' + n(6, 22, 4, c) + n(52, 6, 4, c) + n(52, 22, 4, c) + n(52, 38, 4, c)
+    return ln(4, 22, 56, 22) + n(8, 22, 4, c) + n(20, 22, 4, c) + f'<rect x="27" y="10" width="16" height="24" rx="3" fill="{r_}"/><path d="M32 16 v12 M38 16 v12" stroke="#fff" stroke-width="2.5"/>' + n(52, 22, 4, c)
+
+
+PATTERNS = [
+    ("sup", "Supervisor → Specialists", "orchestrator routes to workers", "novamart · kiro-sdlc-harness"),
+    ("a2a", "Agent-to-Agent (A2A)", "distributed agents over A2A + MCP", "production-ready-ai-agents-eks"),
+    ("par", "Parallel Fan-out / Fan-in", "parallel RAG · parallel Lambdas", "novamart · step-functions"),
+    ("evt", "Event-driven Choreography", "agents react to bus events", "aws-multi-agent-choreography"),
+    ("rtr", "Router / Classifier", "classify → route to a handler", "bedrock-customer-support-flow"),
+    ("hitl", "Human-gated Pipeline", "agents pause for human approval", "kiro-sdlc · step-functions"),
+]
+
+
+def patterns():
+    w, h, u = 1000, 330, "pat"
+    tw, th = 306, 104
+    parts = [f'<text x="30" y="62" style="font: 400 13px {MONO}; fill: {MUTED}">$ orchestration patterns I have shipped:</text>']
+    for i, (g, name, desc, where) in enumerate(PATTERNS):
+        x, y = 28 + (i % 3) * (tw + 13), 84 + (i // 3) * (th + 14)
+        parts.append(f'<rect x="{x}" y="{y}" width="{tw}" height="{th}" rx="8" fill="#0d1117" fill-opacity="0.95" stroke="{RED}" stroke-opacity="0.3"/>')
+        parts.append(f'<rect x="{x + 14}" y="{y + 14}" width="76" height="76" rx="8" fill="#14070a" stroke="{RED}" stroke-opacity="0.4"/>')
+        parts.append(f'<g transform="translate({x + 22}, {y + 30})">{_glyph(g)}</g>')
+        parts.append(f'<text x="{x + 104}" y="{y + 36}" style="font: 700 14px {FONT}; fill: {TEXT}">{escape(name)}</text>')
+        parts.append(f'<text x="{x + 104}" y="{y + 58}" class="b{u}" style="font-size:12px">{escape(desc)}</text>')
+        parts.append(f'<text x="{x + 104}" y="{y + 82}" class="m{u}" fill="{PINK}" style="font-size:10.5px">{escape(where)}</text>')
+    return frame(w, h, "SYS://ORCHESTRATION", "".join(parts), u)
 
 
 WOLF = "M28 -4 C 46 4, 62 18, 72 28 L 78 25 L 90 8 L 94 24 L 97 36 C 104 44, 108 52, 112 60 L 120 64 L 117 70 L 126 76 L 121 81 L 130 90 C 150 120, 172 160, 172 200 C 190 204, 206 222, 206 252 C 190 246, 176 246, 162 254 L 160 258 L 84 258 C 72 258, 70 248, 82 246 C 84 220, 84 196, 82 176 C 80 156, 74 138, 66 122 L 70 116 L 62 110 L 66 104 L 58 98 C 54 86, 52 76, 50 66 C 46 54, 40 44, 32 34 L 14 14 L 40 24 L 24 2 Z"
@@ -352,11 +481,14 @@ def main():
         "h-wins.svg": heading("wins", "Wins", "01"),
         "h-certs.svg": heading("certs", "Certifications", "02"),
         "h-arsenal.svg": heading("ars", "Arsenal", "03"),
-        "h-flow.svg": heading("flow", "Agentic Workflow", "04"),
+        "h-agentic.svg": heading("agentic", "Agentic Engineering", "04"),
+        "panel-harness.svg": harness(),
+        "panel-roles.svg": roles(),
+        "panel-patterns.svg": patterns(),
         "h-builds-v2.svg": heading("builds", "Featured Builds", "05"),
         "h-stats-v2.svg": heading("stats", "Stats", "06"),
-        "panel-arsenal-v2.svg": arsenal(),
-        "panel-flow.svg": workflow(),
+        "panel-arsenal-v3.svg": arsenal(),
+        "panel-flow-v2.svg": workflow(),
         "build-1.svg": build(1, "kiro-sdlc-agent-harness", "An orchestrator drives 7 specialist AI agents through the full SDLC, from a plain-English request to a live, deployed AWS app, with human approval gates.", ["Kiro", "Multi-Agent", "AWS", "Terraform"], True),
         "build-2.svg": build(2, "novamart-multi-agent-agentcore", "5-agent customer support with parallel multi-agent RAG, guardrails, shared state, and CloudWatch/X-Ray observability on Bedrock AgentCore.", ["Python", "AgentCore", "Strands", "RAG"]),
         "build-3.svg": build(3, "production-ready-ai-agents-eks", "Enterprise AI agent platform on EKS + Bedrock: self-managed vs managed tracks behind a model-agnostic LiteLLM plane.", ["EKS", "Kubernetes", "LiteLLM", "Terraform"]),

@@ -1,0 +1,43 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="452" viewBox="0 0 1000 452">
+<defs>
+  <linearGradient id="bgrol" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#06080c"/><stop offset="0.6" stop-color="#0b0a10"/><stop offset="1" stop-color="#1c0609"/>
+  </linearGradient>
+  <radialGradient id="glowrol" cx="1" cy="0" r="0.9">
+    <stop offset="0" stop-color="#dc2626" stop-opacity="0.28"/><stop offset="1" stop-color="#dc2626" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="gridrol" width="26" height="26" patternUnits="userSpaceOnUse">
+    <path d="M26 0 L0 0 0 26" fill="none" stroke="#dc2626" stroke-opacity="0.07"/>
+  </pattern>
+  <pattern id="scanrol" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="#000" fill-opacity="0.35"/>
+  </pattern>
+  <clipPath id="cliprol"><rect width="1000" height="452" rx="10"/></clipPath>
+  <style>
+    .trol { font: 700 17px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc; }
+    .brol { font: 400 13.5px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #9aa4b2; }
+    .mrol { font: 500 13px 'Fira Code', Consolas, 'Courier New', monospace; }
+    .tagrol { font: 600 11px 'Fira Code', Consolas, 'Courier New', monospace; fill: #dc2626; letter-spacing: 2px; }
+    .sweeprol { animation: swrol 5s linear infinite; }
+    @keyframes swrol { from { transform: translateY(-40px); } to { transform: translateY(492px); } }
+    .blinkrol { animation: blrol 1s steps(1) infinite; }
+    @keyframes blrol { 50% { opacity: 0; } }
+    .pulserol { animation: purol 2.6s ease-in-out infinite; }
+    @keyframes purol { 50% { stroke-opacity: 0.25; } }
+  </style>
+</defs>
+<g clip-path="url(#cliprol)">
+  <rect width="1000" height="452" fill="url(#bgrol)"/>
+  <rect width="1000" height="452" fill="url(#gridrol)"/>
+  <rect width="1000" height="452" fill="url(#glowrol)"/>
+  <rect width="1000" height="452" fill="url(#scanrol)"/>
+  <rect class="sweeprol" width="1000" height="40" fill="#dc2626" fill-opacity="0.05"/>
+  <text x="30" y="62" style="font: 400 13px 'Fira Code', Consolas, 'Courier New', monospace; fill: #9aa4b2">$ right model for the right role: <tspan fill="#fca5a5">cost · latency · reasoning</tspan></text><rect x="24" y="84" width="952" height="30" rx="6" fill="#2a0a0c"/><text x="40" y="104" class="tagrol">AGENT ROLE</text><text x="300" y="104" class="tagrol">MODEL</text><text x="540" y="104" class="tagrol">WHY THIS MODEL</text><text x="850" y="104" class="tagrol">WHERE</text><rect x="24" y="120" width="952" height="34" rx="6" fill="#0d1117" fill-opacity="0.75" stroke="#dc2626" stroke-opacity="0.15"/><text x="40" y="142" style="font: 600 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc">Orchestrator / Router</text><rect x="294" y="127" width="147" height="20" rx="10" fill="#1a0507" stroke="#dc2626" stroke-opacity="0.7"/><text x="305" y="141" class="mrol" fill="#fca5a5" style="font-size:12px; font-weight:700">Claude Haiku 4.5</text><text x="540" y="142" class="brol">fast, cheap routing + workflow state</text><text x="850" y="142" class="mrol" fill="#9aa4b2" style="font-size:11.5px">novamart</text><rect x="24" y="160" width="952" height="34" rx="6" fill="#0d1117" fill-opacity="0.95" stroke="#dc2626" stroke-opacity="0.15"/><text x="40" y="182" style="font: 600 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc">Specialist workers</text><rect x="294" y="167" width="155" height="20" rx="10" fill="#1a0507" stroke="#dc2626" stroke-opacity="0.7"/><text x="305" y="181" class="mrol" fill="#fca5a5" style="font-size:12px; font-weight:700">Claude Sonnet 4.5</text><text x="540" y="182" class="brol">tool use · reasoning · temp 0.1</text><text x="850" y="182" class="mrol" fill="#9aa4b2" style="font-size:11.5px">novamart</text><rect x="24" y="200" width="952" height="34" rx="6" fill="#0d1117" fill-opacity="0.75" stroke="#dc2626" stroke-opacity="0.15"/><text x="40" y="222" style="font: 600 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc">LLM-as-a-Judge</text><rect x="294" y="207" width="155" height="20" rx="10" fill="#1a0507" stroke="#dc2626" stroke-opacity="0.7"/><text x="305" y="221" class="mrol" fill="#fca5a5" style="font-size:12px; font-weight:700">Claude Sonnet 4.5</text><text x="540" y="222" class="brol">scores agent outputs in evals</text><text x="850" y="222" class="mrol" fill="#9aa4b2" style="font-size:11.5px">eks</text><rect x="24" y="240" width="952" height="34" rx="6" fill="#0d1117" fill-opacity="0.95" stroke="#dc2626" stroke-opacity="0.15"/><text x="40" y="262" style="font: 600 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc">Managed agent backbone</text><rect x="294" y="247" width="147" height="20" rx="10" fill="#1a0507" stroke="#dc2626" stroke-opacity="0.7"/><text x="305" y="261" class="mrol" fill="#fca5a5" style="font-size:12px; font-weight:700">Amazon Nova Lite</text><text x="540" y="262" class="brol">low-cost Bedrock serving</text><text x="850" y="262" class="mrol" fill="#9aa4b2" style="font-size:11.5px">eks</text><rect x="24" y="280" width="952" height="34" rx="6" fill="#0d1117" fill-opacity="0.75" stroke="#dc2626" stroke-opacity="0.15"/><text x="40" y="302" style="font: 600 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc">Self-hosted agent</text><rect x="294" y="287" width="162" height="20" rx="10" fill="#1a0507" stroke="#dc2626" stroke-opacity="0.7"/><text x="305" y="301" class="mrol" fill="#fca5a5" style="font-size:12px; font-weight:700">Qwen 2.5 3B · vLLM</text><text x="540" y="302" class="brol">open-source on AWS Inferentia</text><text x="850" y="302" class="mrol" fill="#9aa4b2" style="font-size:11.5px">eks</text><rect x="24" y="320" width="952" height="34" rx="6" fill="#0d1117" fill-opacity="0.95" stroke="#dc2626" stroke-opacity="0.15"/><text x="40" y="342" style="font: 600 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc">Tool-calling assistant</text><rect x="294" y="327" width="116" height="20" rx="10" fill="#1a0507" stroke="#dc2626" stroke-opacity="0.7"/><text x="305" y="341" class="mrol" fill="#fca5a5" style="font-size:12px; font-weight:700">gpt-4.1-mini</text><text x="540" y="342" class="brol">Azure AI Foundry multi-tool</text><text x="850" y="342" class="mrol" fill="#9aa4b2" style="font-size:11.5px">azure</text><rect x="24" y="360" width="952" height="34" rx="6" fill="#0d1117" fill-opacity="0.75" stroke="#dc2626" stroke-opacity="0.15"/><text x="40" y="382" style="font: 600 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc">Embeddings / RAG</text><rect x="294" y="367" width="201" height="20" rx="10" fill="#1a0507" stroke="#dc2626" stroke-opacity="0.7"/><text x="305" y="381" class="mrol" fill="#fca5a5" style="font-size:12px; font-weight:700">Titan Embed v2 · MiniLM</text><text x="540" y="382" class="brol">vector search &amp; retrieval</text><text x="850" y="382" class="mrol" fill="#9aa4b2" style="font-size:11.5px">novamart · eks</text><rect x="24" y="400" width="952" height="34" rx="6" fill="#0d1117" fill-opacity="0.95" stroke="#dc2626" stroke-opacity="0.15"/><text x="40" y="422" style="font: 600 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc">Coding agents</text><rect x="294" y="407" width="170" height="20" rx="10" fill="#1a0507" stroke="#dc2626" stroke-opacity="0.7"/><text x="305" y="421" class="mrol" fill="#fca5a5" style="font-size:12px; font-weight:700">Claude Code · Codex</text><text x="540" y="422" class="brol">agentic software delivery</text><text x="850" y="422" class="mrol" fill="#9aa4b2" style="font-size:11.5px">daily driver</text>
+</g>
+<rect x="0.5" y="0.5" width="999" height="451" rx="10" fill="none" stroke="#dc2626" stroke-opacity="0.45" class="pulserol"/>
+<g stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="square">
+  <path d="M2 20 V2 H20"/><path d="M980 2 H998 V20"/>
+  <path d="M2 432 V450 H20"/><path d="M980 450 H998 V432"/>
+</g>
+<text x="22" y="28" class="tagrol">SYS://ROLES_X_MODELS</text>
+</svg>

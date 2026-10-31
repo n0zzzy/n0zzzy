@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="275" viewBox="0 0 1000 275">
+<defs>
+  <linearGradient id="bgflw" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#06080c"/><stop offset="0.6" stop-color="#0b0a10"/><stop offset="1" stop-color="#1c0609"/>
+  </linearGradient>
+  <radialGradient id="glowflw" cx="1" cy="0" r="0.9">
+    <stop offset="0" stop-color="#dc2626" stop-opacity="0.28"/><stop offset="1" stop-color="#dc2626" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="gridflw" width="26" height="26" patternUnits="userSpaceOnUse">
+    <path d="M26 0 L0 0 0 26" fill="none" stroke="#dc2626" stroke-opacity="0.07"/>
+  </pattern>
+  <pattern id="scanflw" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="#000" fill-opacity="0.35"/>
+  </pattern>
+  <clipPath id="clipflw"><rect width="1000" height="275" rx="10"/></clipPath>
+  <style>
+    .tflw { font: 700 17px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc; }
+    .bflw { font: 400 13.5px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #9aa4b2; }
+    .mflw { font: 500 13px 'Fira Code', Consolas, 'Courier New', monospace; }
+    .tagflw { font: 600 11px 'Fira Code', Consolas, 'Courier New', monospace; fill: #dc2626; letter-spacing: 2px; }
+    .sweepflw { animation: swflw 5s linear infinite; }
+    @keyframes swflw { from { transform: translateY(-40px); } to { transform: translateY(315px); } }
+    .blinkflw { animation: blflw 1s steps(1) infinite; }
+    @keyframes blflw { 50% { opacity: 0; } }
+    .pulseflw { animation: puflw 2.6s ease-in-out infinite; }
+    @keyframes puflw { 50% { stroke-opacity: 0.25; } }
+  </style>
+</defs>
+<g clip-path="url(#clipflw)">
+  <rect width="1000" height="275" fill="url(#bgflw)"/>
+  <rect width="1000" height="275" fill="url(#gridflw)"/>
+  <rect width="1000" height="275" fill="url(#glowflw)"/>
+  <rect width="1000" height="275" fill="url(#scanflw)"/>
+  <rect class="sweepflw" width="1000" height="40" fill="#dc2626" fill-opacity="0.05"/>
+  <line x1="114.0" y1="214" x2="898.0" y2="214" stroke="#dc2626" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="4 6"/><rect x="30" y="92" width="168" height="104" rx="8" fill="#0d1117" fill-opacity="0.95" stroke="#dc2626" stroke-opacity="0.35" /><rect x="30" y="92" width="168" height="4" rx="2" fill="#dc2626"/><text x="114.0" y="122" text-anchor="middle" class="tagflw">01 · SPEC</text><text x="114.0" y="150" text-anchor="middle" style="font: 700 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc">Kiro · VS Code</text><text x="114.0" y="172" text-anchor="middle" class="bflw" style="font-size:12px">specs · steering · tasks</text><line x1="114.0" y1="196" x2="114.0" y2="214" stroke="#dc2626" stroke-opacity="0.45" stroke-width="1.5"/><rect x="226" y="92" width="168" height="104" rx="8" fill="#2a0a0c" fill-opacity="0.95" stroke="#dc2626" stroke-opacity="0.8" class="pulseflw"/><rect x="226" y="92" width="168" height="4" rx="2" fill="#dc2626"/><text x="310.0" y="122" text-anchor="middle" class="tagflw">02 · BUILD</text><text x="310.0" y="150" text-anchor="middle" style="font: 700 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc">Claude Code · Codex</text><text x="310.0" y="172" text-anchor="middle" class="bflw" style="font-size:12px">OpenCode · Antigravity</text><line x1="310.0" y1="196" x2="310.0" y2="214" stroke="#dc2626" stroke-opacity="0.45" stroke-width="1.5"/><path d="M204 144.0 L222 144.0" stroke="#dc2626" stroke-width="2.5"/><path d="M216 139.0 L223 144.0 L216 149.0" fill="none" stroke="#dc2626" stroke-width="2.5"/><rect x="422" y="92" width="168" height="104" rx="8" fill="#0d1117" fill-opacity="0.95" stroke="#dc2626" stroke-opacity="0.35" /><rect x="422" y="92" width="168" height="4" rx="2" fill="#dc2626"/><text x="506.0" y="122" text-anchor="middle" class="tagflw">03 · MODELS</text><text x="506.0" y="150" text-anchor="middle" style="font: 700 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc">OpenRouter · Ollama</text><text x="506.0" y="172" text-anchor="middle" class="bflw" style="font-size:12px">OmniRoute · Gemini</text><line x1="506.0" y1="196" x2="506.0" y2="214" stroke="#dc2626" stroke-opacity="0.45" stroke-width="1.5"/><path d="M400 144.0 L418 144.0" stroke="#dc2626" stroke-width="2.5"/><path d="M412 139.0 L419 144.0 L412 149.0" fill="none" stroke="#dc2626" stroke-width="2.5"/><rect x="618" y="92" width="168" height="104" rx="8" fill="#0d1117" fill-opacity="0.95" stroke="#dc2626" stroke-opacity="0.35" /><rect x="618" y="92" width="168" height="4" rx="2" fill="#dc2626"/><text x="702.0" y="122" text-anchor="middle" class="tagflw">04 · TEST</text><text x="702.0" y="150" text-anchor="middle" style="font: 700 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc">Playwright · pytest</text><text x="702.0" y="172" text-anchor="middle" class="bflw" style="font-size:12px">evals · security review</text><line x1="702.0" y1="196" x2="702.0" y2="214" stroke="#dc2626" stroke-opacity="0.45" stroke-width="1.5"/><path d="M596 144.0 L614 144.0" stroke="#dc2626" stroke-width="2.5"/><path d="M608 139.0 L615 144.0 L608 149.0" fill="none" stroke="#dc2626" stroke-width="2.5"/><rect x="814" y="92" width="168" height="104" rx="8" fill="#0d1117" fill-opacity="0.95" stroke="#dc2626" stroke-opacity="0.35" /><rect x="814" y="92" width="168" height="4" rx="2" fill="#dc2626"/><text x="898.0" y="122" text-anchor="middle" class="tagflw">05 · SHIP</text><text x="898.0" y="150" text-anchor="middle" style="font: 700 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc">GitHub Actions</text><text x="898.0" y="172" text-anchor="middle" class="bflw" style="font-size:12px">Terraform → AWS</text><line x1="898.0" y1="196" x2="898.0" y2="214" stroke="#dc2626" stroke-opacity="0.45" stroke-width="1.5"/><path d="M792 144.0 L810 144.0" stroke="#dc2626" stroke-width="2.5"/><path d="M804 139.0 L811 144.0 L804 149.0" fill="none" stroke="#dc2626" stroke-width="2.5"/><circle cx="114.0" cy="214" r="5" fill="#fff" class="pkflw" style="animation-delay:0.0s"/><circle cx="114.0" cy="214" r="5" fill="#fff" class="pkflw" style="animation-delay:1.5s"/><circle cx="114.0" cy="214" r="5" fill="#fff" class="pkflw" style="animation-delay:3.0s"/><style>.pkflw { opacity: 0; animation: pkflw 4.5s linear infinite; filter: drop-shadow(0 0 6px #dc2626); }
+@keyframes pkflw { 0% { transform: translateX(0); opacity: 0; } 5% { opacity: 1; } 95% { opacity: 1; } 100% { transform: translateX(784px); opacity: 0; } }</style><text x="30" y="66" style="font: 400 13px 'Fira Code', Consolas, 'Courier New', monospace; fill: #9aa4b2">$ how n0zzzy ships: <tspan fill="#fca5a5">spec-driven, agent-built, human-approved</tspan><tspan class="blinkflw" fill="#dc2626"> █</tspan></text><text x="30" y="253" style="font: 400 12px 'Fira Code', Consolas, 'Courier New', monospace; fill: #9aa4b2">humans own the spec and the approve-deploy gate · agents do the rest</text>
+</g>
+<rect x="0.5" y="0.5" width="999" height="274" rx="10" fill="none" stroke="#dc2626" stroke-opacity="0.45" class="pulseflw"/>
+<g stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="square">
+  <path d="M2 20 V2 H20"/><path d="M980 2 H998 V20"/>
+  <path d="M2 255 V273 H20"/><path d="M980 273 H998 V255"/>
+</g>
+<text x="22" y="28" class="tagflw">SYS://AGENTIC_WORKFLOW</text>
+</svg>
