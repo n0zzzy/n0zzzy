@@ -34,7 +34,7 @@
 
 <img src="./assets/h-arsenal.svg" width="100%" alt="Arsenal" />
 
-<img src="./assets/panel-arsenal.svg" width="100%" alt="Tech stack: AWS, Azure, Docker, Kubernetes, Terraform, GitHub Actions, Linux, Python, TypeScript, JavaScript, Kotlin, React, Next.js, Tailwind, Node.js, Express, PostgreSQL, MongoDB, Firebase, Vercel" />
+<img src="./assets/panel-arsenal.svg" width="100%" alt="Tech stack: AI / agentic coding with Claude, Codex, Gemini, Antigravity, Ollama, OpenRouter, OpenCode, OmniRoute, Kiro; AWS, Azure, Docker, Kubernetes, Terraform, GitHub Actions, Linux, Python, TypeScript, JavaScript, Kotlin, React, Next.js, Tailwind, Node.js, Express, PostgreSQL, MongoDB, Firebase, Vercel" />
 
 <img src="./assets/h-builds.svg" width="100%" alt="Featured Builds" />
 

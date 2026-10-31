@@ -219,20 +219,57 @@ ARSENAL = [
 ]
 
 
-def arsenal():
+AI_TOOLS = [
+    ("Claude", "si", "claude", None),
+    ("Codex", "glyph", '<path d="M4 7l5 5-5 5" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/><path d="M12 17h8" stroke="#fff" stroke-width="2.4" stroke-linecap="round"/>', None),
+    ("Gemini", "si", "googlegemini", None),
+    ("Antigravity", "glyph", '<path d="M5 14l7-7 7 7M5 20l7-7 7 7" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/>', None),
+    ("Ollama", "si", "ollama", "ffffff"),
+    ("OpenRouter", "si", "openrouter", "ffffff"),
+    ("OpenCode", "si", "opencode", "ffffff"),
+    ("OmniRoute", "glyph", '<path d="M12 12L5 6M12 12l7-6M12 12v8" stroke="#fff" stroke-width="2"/><circle cx="12" cy="12" r="3" fill="#dc2626" stroke="#fff" stroke-width="1.5"/><circle cx="5" cy="6" r="2.4" fill="#fff"/><circle cx="19" cy="6" r="2.4" fill="#fff"/><circle cx="12" cy="20" r="2.4" fill="#fff"/>', None),
+    ("Kiro", "glyph", '<path d="M6 21V10a6 6 0 0 1 12 0v11l-2-1.6-2 1.6-2-1.6-2 1.6-2-1.6z" fill="#fff"/><circle cx="10" cy="11" r="1.4" fill="#0d1117"/><circle cx="14" cy="11" r="1.4" fill="#0d1117"/>', None),
+]
+
+ARSENAL = [
+    ("CLOUD / DEVOPS", ["aws", "azure", "docker", "kubernetes", "terraform", "githubactions", "linux"]),
+    ("LANGUAGES", ["python", "ts", "js", "kotlin", "html", "css"]),
+    ("FRONTEND / MOBILE", ["react", "nextjs", "tailwind", "androidstudio", "figma"]),
+    ("BACKEND / DATA", ["nodejs", "express", "postgres", "mongodb", "firebase", "vercel"]),
+]
+
+
+def _fetch(url):
     import base64
     import urllib.request
+    req = urllib.request.Request(url, headers={"User-Agent": "Mozilla/5.0"})
+    return base64.b64encode(urllib.request.urlopen(req, timeout=20).read()).decode()
+
+
+def arsenal():
     w, u = 1000, "ars"
-    size, gap, top, row_h = 52, 14, 62, 78
-    h = top + len(ARSENAL) * row_h + 10
+    size, gap, top, row_h, ai_h = 52, 14, 62, 78, 104
+    h = top + ai_h + len(ARSENAL) * row_h + 10
     rows = []
+    # AI / agentic row: labeled tiles
+    rows.append(f'<rect x="24" y="{top}" width="{w - 48}" height="{ai_h - 12}" rx="8" fill="#14070a" fill-opacity="0.95" stroke="{RED}" stroke-opacity="0.6" class="pulse{u}"/>')
+    rows.append(f'<text x="44" y="{top + 40}" class="tag{u}" style="font-size:12px">AI / AGENTIC</text>')
+    rows.append(f'<text x="44" y="{top + 58}" class="m{u}" fill="{MUTED}" style="font-size:10.5px">agentic coding stack</text>')
+    for j, (label, kind, data, color) in enumerate(AI_TOOLS):
+        x, y = 250 + j * 76, top + 10
+        rows.append(f'<rect x="{x}" y="{y}" width="{size}" height="{size}" rx="12" fill="#1c2128" stroke="{RED}" stroke-opacity="0.35"/>')
+        if kind == "si":
+            src = _fetch(f"https://cdn.simpleicons.org/{data}" + (f"/{color}" if color else ""))
+            rows.append(f'<image x="{x + 12}" y="{y + 12}" width="28" height="28" href="data:image/svg+xml;base64,{src}"/>')
+        else:
+            rows.append(f'<g transform="translate({x + 12}, {y + 12}) scale(1.1667)">{data}</g>')
+        rows.append(f'<text x="{x + size / 2}" y="{y + size + 18}" text-anchor="middle" class="m{u}" fill="{TEXT}" style="font-size:10.5px">{label}</text>')
     for i, (label, icons) in enumerate(ARSENAL):
-        y = top + i * row_h
+        y = top + ai_h + i * row_h
         rows.append(f'<rect x="24" y="{y}" width="{w - 48}" height="{row_h - 12}" rx="8" fill="#0d1117" fill-opacity="0.9" stroke="{RED}" stroke-opacity="0.2"/>')
         rows.append(f'<text x="44" y="{y + row_h / 2}" class="tag{u}" style="font-size:12px">{label}</text>')
         for j, name in enumerate(icons):
-            req = urllib.request.Request(f"https://skillicons.dev/icons?i={name}&theme=dark", headers={"User-Agent": "Mozilla/5.0"})
-            data = base64.b64encode(urllib.request.urlopen(req, timeout=20).read()).decode()
+            data = _fetch(f"https://skillicons.dev/icons?i={name}&theme=dark")
             x = 250 + j * (size + gap)
             rows.append(f'<image x="{x}" y="{y + (row_h - 12 - size) / 2}" width="{size}" height="{size}" href="data:image/svg+xml;base64,{data}"/>')
     return frame(w, h, "SYS://ARSENAL", "".join(rows), u)
