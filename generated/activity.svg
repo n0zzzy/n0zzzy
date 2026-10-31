@@ -11,21 +11,21 @@
 </style>
 <rect x="0.5" y="0.5" width="989" height="299" rx="10" fill="#0d1117" stroke="#30363d"/>
 <rect x="0.5" y="0.5" width="4" height="299" rx="2" fill="#dc2626"/>
-<text x="25" y="34" class="t">contribution activity // last 31 days — 18 contributions</text>
+<text x="25" y="34" class="t">contribution activity // last 31 days — 61 contributions</text>
 <defs><linearGradient id="af" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#dc2626" stop-opacity="0.45"/><stop offset="1" stop-color="#dc2626" stop-opacity="0"/></linearGradient></defs>
 <line x1="50" y1="70" x2="965" y2="70" stroke="#30363d" stroke-dasharray="3 4"/>
-<text x="40" y="74" class="l" text-anchor="end">14</text>
+<text x="40" y="74" class="l" text-anchor="end">28</text>
 <line x1="50" y1="116.25" x2="965" y2="116.25" stroke="#30363d" stroke-dasharray="3 4"/>
-<text x="40" y="120.25" class="l" text-anchor="end">11</text>
+<text x="40" y="120.25" class="l" text-anchor="end">21</text>
 <line x1="50" y1="162.5" x2="965" y2="162.5" stroke="#30363d" stroke-dasharray="3 4"/>
-<text x="40" y="166.5" class="l" text-anchor="end">7</text>
+<text x="40" y="166.5" class="l" text-anchor="end">14</text>
 <line x1="50" y1="208.75" x2="965" y2="208.75" stroke="#30363d" stroke-dasharray="3 4"/>
-<text x="40" y="212.75" class="l" text-anchor="end">4</text>
+<text x="40" y="212.75" class="l" text-anchor="end">7</text>
 <line x1="50" y1="255" x2="965" y2="255" stroke="#30363d" stroke-dasharray="3 4"/>
 <text x="40" y="259" class="l" text-anchor="end">0</text>
-<path d="M50.0 255.0 L80.5 255.0 L111.0 255.0 L141.5 255.0 L172.0 255.0 L202.5 255.0 L233.0 255.0 L263.5 255.0 L294.0 228.6 L324.5 255.0 L355.0 255.0 L385.5 255.0 L416.0 255.0 L446.5 255.0 L477.0 255.0 L507.5 255.0 L538.0 70.0 L568.5 228.6 L599.0 255.0 L629.5 255.0 L660.0 255.0 L690.5 255.0 L721.0 255.0 L751.5 255.0 L782.0 255.0 L812.5 255.0 L843.0 255.0 L873.5 255.0 L904.0 255.0 L934.5 255.0 L965.0 255.0 L965.0 255 L50 255 Z" fill="url(#af)"/>
-<path d="M50.0 255.0 L80.5 255.0 L111.0 255.0 L141.5 255.0 L172.0 255.0 L202.5 255.0 L233.0 255.0 L263.5 255.0 L294.0 228.6 L324.5 255.0 L355.0 255.0 L385.5 255.0 L416.0 255.0 L446.5 255.0 L477.0 255.0 L507.5 255.0 L538.0 70.0 L568.5 228.6 L599.0 255.0 L629.5 255.0 L660.0 255.0 L690.5 255.0 L721.0 255.0 L751.5 255.0 L782.0 255.0 L812.5 255.0 L843.0 255.0 L873.5 255.0 L904.0 255.0 L934.5 255.0 L965.0 255.0" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="4000" style="animation: draw 2s ease-out"/>
-<circle cx="294" cy="228.57142857142858" r="3.5" fill="#0d1117" stroke="#dc2626" stroke-width="2"/><circle cx="538" cy="70" r="3.5" fill="#0d1117" stroke="#dc2626" stroke-width="2"/><circle cx="568.5" cy="228.57142857142858" r="3.5" fill="#0d1117" stroke="#dc2626" stroke-width="2"/>
+<path d="M50.0 255.0 L80.5 255.0 L111.0 255.0 L141.5 255.0 L172.0 255.0 L202.5 255.0 L233.0 255.0 L263.5 255.0 L294.0 241.8 L324.5 255.0 L355.0 215.4 L385.5 241.8 L416.0 215.4 L446.5 248.4 L477.0 255.0 L507.5 255.0 L538.0 162.5 L568.5 241.8 L599.0 255.0 L629.5 255.0 L660.0 255.0 L690.5 255.0 L721.0 255.0 L751.5 255.0 L782.0 255.0 L812.5 255.0 L843.0 255.0 L873.5 255.0 L904.0 255.0 L934.5 255.0 L965.0 70.0 L965.0 255 L50 255 Z" fill="url(#af)"/>
+<path d="M50.0 255.0 L80.5 255.0 L111.0 255.0 L141.5 255.0 L172.0 255.0 L202.5 255.0 L233.0 255.0 L263.5 255.0 L294.0 241.8 L324.5 255.0 L355.0 215.4 L385.5 241.8 L416.0 215.4 L446.5 248.4 L477.0 255.0 L507.5 255.0 L538.0 162.5 L568.5 241.8 L599.0 255.0 L629.5 255.0 L660.0 255.0 L690.5 255.0 L721.0 255.0 L751.5 255.0 L782.0 255.0 L812.5 255.0 L843.0 255.0 L873.5 255.0 L904.0 255.0 L934.5 255.0 L965.0 70.0" fill="none" stroke="#dc2626" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="4000" style="animation: draw 2s ease-out"/>
+<circle cx="294" cy="241.78571428571428" r="3.5" fill="#0d1117" stroke="#dc2626" stroke-width="2"/><circle cx="355" cy="215.35714285714286" r="3.5" fill="#0d1117" stroke="#dc2626" stroke-width="2"/><circle cx="385.5" cy="241.78571428571428" r="3.5" fill="#0d1117" stroke="#dc2626" stroke-width="2"/><circle cx="416" cy="215.35714285714286" r="3.5" fill="#0d1117" stroke="#dc2626" stroke-width="2"/><circle cx="446.5" cy="248.39285714285714" r="3.5" fill="#0d1117" stroke="#dc2626" stroke-width="2"/><circle cx="538" cy="162.5" r="3.5" fill="#0d1117" stroke="#dc2626" stroke-width="2"/><circle cx="568.5" cy="241.78571428571428" r="3.5" fill="#0d1117" stroke="#dc2626" stroke-width="2"/><circle cx="965" cy="70" r="3.5" fill="#0d1117" stroke="#dc2626" stroke-width="2"/>
 <text x="50" y="277" class="l" text-anchor="middle">10/01</text><text x="202.5" y="277" class="l" text-anchor="middle">10/06</text><text x="355" y="277" class="l" text-anchor="middle">10/11</text><text x="507.5" y="277" class="l" text-anchor="middle">10/16</text><text x="660" y="277" class="l" text-anchor="middle">10/21</text><text x="812.5" y="277" class="l" text-anchor="middle">10/26</text><text x="965" y="277" class="l" text-anchor="middle">10/31</text>
 <style>@keyframes draw { from { stroke-dashoffset: 4000; } to { stroke-dashoffset: 0; } }</style>
 </svg>
