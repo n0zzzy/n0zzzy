@@ -126,52 +126,54 @@ philosophy: "I have no enemies."
 <tr>
 <td width="50%" valign="top">
 
-**[🧠 novamart-multi-agent-agentcore](https://github.com/n0zzzy/novamart-multi-agent-agentcore)**<br/>
-<sub>Multi-agent customer support with parallel RAG, guardrails & observability on Bedrock AgentCore</sub><br/>
-<img src="https://img.shields.io/badge/Python-0d1117?style=flat-square&logo=python&logoColor=dc2626" /> <img src="https://img.shields.io/badge/AWS-0d1117?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2RjMjYyNiI%2BPHBhdGggZD0iTTYuNSAyMGE0LjUgNC41IDAgMCAxLS43LTguOTVBNi4yIDYuMiAwIDAgMSAxNy43IDkuMyA1LjQgNS40IDAgMCAxIDE4IDIweiIvPjwvc3ZnPg%3D%3D" />
+**[🤖 kiro-sdlc-agent-harness](https://github.com/n0zzzy/kiro-sdlc-agent-harness)** 👑<br/>
+<sub>An orchestrator drives <b>7 specialist AI agents</b> through the full SDLC, from a plain-English request to a <b>live, deployed AWS app</b>, with human approval gates</sub><br/>
+<img src="https://img.shields.io/badge/Kiro-0d1117?style=flat-square" /> <img src="https://img.shields.io/badge/Multi--Agent-0d1117?style=flat-square&logo=robotframework&logoColor=dc2626" /> <img src="https://img.shields.io/badge/AWS-0d1117?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2RjMjYyNiI%2BPHBhdGggZD0iTTYuNSAyMGE0LjUgNC41IDAgMCAxLS43LTguOTVBNi4yIDYuMiAwIDAgMSAxNy43IDkuMyA1LjQgNS40IDAgMCAxIDE4IDIweiIvPjwvc3ZnPg%3D%3D" />
 
 </td>
+<td width="50%" valign="top">
+
+**[🧠 novamart-multi-agent-agentcore](https://github.com/n0zzzy/novamart-multi-agent-agentcore)**<br/>
+<sub><b>5-agent</b> customer support with <b>parallel multi-agent RAG</b>, guardrails, shared state & CloudWatch/X-Ray observability on Bedrock AgentCore</sub><br/>
+<img src="https://img.shields.io/badge/Python-0d1117?style=flat-square&logo=python&logoColor=dc2626" /> <img src="https://img.shields.io/badge/AgentCore-0d1117?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2RjMjYyNiI%2BPHBhdGggZD0iTTYuNSAyMGE0LjUgNC41IDAgMCAxLS43LTguOTVBNi4yIDYuMiAwIDAgMSAxNy43IDkuMyA1LjQgNS40IDAgMCAxIDE4IDIweiIvPjwvc3ZnPg%3D%3D" />
+
+</td>
+</tr>
+<tr>
 <td width="50%" valign="top">
 
 **[☸️ production-ready-ai-agents-eks](https://github.com/n0zzzy/production-ready-ai-agents-eks)**<br/>
-<sub>Enterprise AI agent platform on EKS + Bedrock with a model-agnostic LiteLLM plane</sub><br/>
-<img src="https://img.shields.io/badge/Python-0d1117?style=flat-square&logo=python&logoColor=dc2626" /> <img src="https://img.shields.io/badge/Kubernetes-0d1117?style=flat-square&logo=kubernetes&logoColor=dc2626" />
+<sub>Enterprise AI agent platform on <b>EKS + Bedrock</b>: self-managed vs managed tracks, model-agnostic <b>LiteLLM</b> plane</sub><br/>
+<img src="https://img.shields.io/badge/Kubernetes-0d1117?style=flat-square&logo=kubernetes&logoColor=dc2626" /> <img src="https://img.shields.io/badge/Terraform-0d1117?style=flat-square&logo=terraform&logoColor=dc2626" />
 
 </td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-**[🐾 pawfeed-smart-pet-feeder](https://github.com/n0zzzy/pawfeed-smart-pet-feeder)**<br/>
-<sub>Smart pet feeder web + PWA with Playwright tests & CI/CD</sub><br/>
-<img src="https://img.shields.io/badge/JavaScript-0d1117?style=flat-square&logo=javascript&logoColor=dc2626" /> <img src="https://img.shields.io/badge/Playwright-0d1117?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2RjMjYyNiI%2BPHBhdGggZD0iTTYgM2wxNSA5LTE1IDl6Ii8%2BPC9zdmc%2B" />
-
-</td>
-<td width="50%" valign="top">
-
-**[🔧 devops-hands-on-lab](https://github.com/n0zzzy/devops-hands-on-lab)**<br/>
-<sub>Docker, Terraform & GitHub Actions CI/CD</sub><br/>
-<img src="https://img.shields.io/badge/Docker-0d1117?style=flat-square&logo=docker&logoColor=dc2626" /> <img src="https://img.shields.io/badge/Terraform-0d1117?style=flat-square&logo=terraform&logoColor=dc2626" />
-
-</td>
-</tr>
-<tr>
 <td width="50%" valign="top">
 
 **[🛰️ cloudops-sentry](https://github.com/n0zzzy/cloudops-sentry)**<br/>
-<sub>Autonomous DevOps & SRE agent that prevents incidents before they happen</sub><br/>
+<sub><b>Autonomous DevOps & SRE agent</b> that prevents incidents before they happen. Built for the DevKada x Clanker Cloud challenge</sub><br/>
 <img src="https://img.shields.io/badge/Python-0d1117?style=flat-square&logo=python&logoColor=dc2626" /> <img src="https://img.shields.io/badge/AI_Agent-0d1117?style=flat-square&logo=robotframework&logoColor=dc2626" />
+
+</td>
+</tr>
+<tr>
+<td width="50%" valign="top">
+
+**[💬 ai-customer-support-agent](https://github.com/n0zzzy/ai-customer-support-agent)**<br/>
+<sub>Support agent with <b>order tracking & refunds via Gateway/Lambda</b>, RAG, Code Interpreter, web browsing & long-term memory</sub><br/>
+<img src="https://img.shields.io/badge/Strands_SDK-0d1117?style=flat-square&logo=python&logoColor=dc2626" /> <img src="https://img.shields.io/badge/Lambda-0d1117?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2RjMjYyNiI%2BPHBhdGggZD0iTTYuNSAyMGE0LjUgNC41IDAgMCAxLS43LTguOTVBNi4yIDYuMiAwIDAgMSAxNy43IDkuMyA1LjQgNS40IDAgMCAxIDE4IDIweiIvPjwvc3ZnPg%3D%3D" />
 
 </td>
 <td width="50%" valign="top">
 
-**[📊 kiro-ph-data-dashboard](https://github.com/n0zzzy/kiro-ph-data-dashboard)**<br/>
-<sub>Philippine data dashboard</sub><br/>
-<img src="https://img.shields.io/badge/TypeScript-0d1117?style=flat-square&logo=typescript&logoColor=dc2626" />
+**[🐾 pawfeed-smart-pet-feeder](https://github.com/n0zzzy/pawfeed-smart-pet-feeder)**<br/>
+<sub>Smart pet feeder <b>web + PWA</b> with Playwright tests, Allure reports & CI/CD. <a href="https://pawfeed-smart-pet-feeder.vercel.app"><b>Live demo →</b></a></sub><br/>
+<img src="https://img.shields.io/badge/Playwright-0d1117?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2RjMjYyNiI%2BPHBhdGggZD0iTTYgM2wxNSA5LTE1IDl6Ii8%2BPC9zdmc%2B" /> <img src="https://img.shields.io/badge/Vercel-0d1117?style=flat-square&logo=vercel&logoColor=dc2626" />
 
 </td>
 </tr>
 </table>
+
+<p align="center"><sub><b>More builds:</b> <a href="https://github.com/n0zzzy/aws-eks-workshop">☸️ EKS + Karpenter lab</a> · <a href="https://github.com/n0zzzy/azure-ai-foundry-multitool-agent">🔷 Azure AI Foundry agent</a> · <a href="https://github.com/n0zzzy/aws-bedrock-customer-support-flow">🔁 Bedrock Flows router</a> · <a href="https://github.com/n0zzzy/kiro-ph-data-dashboard">🌊 PH flood control dashboard</a> · <a href="https://github.com/n0zzzy/aws-multi-agent-orchestration">🎛️ Step Functions orchestration</a> · <a href="https://github.com/n0zzzy/aws-multi-agent-choreography">🔀 EventBridge choreography</a></sub></p>
 
 ### 📊 Stats
 
