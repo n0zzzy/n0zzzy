@@ -192,8 +192,45 @@ ${xLabels}
 <style>@keyframes draw { from { stroke-dashoffset: 4000; } to { stroke-dashoffset: 0; } }</style>`
 );
 
+// --- trophies ---
+const tier = (v, [s, a, b, c]) => (v >= s ? "S" : v >= a ? "A" : v >= b ? "B" : v >= c ? "C" : "?");
+const trophies = [
+  ["Contributor", "contributions", stats[0][1], [1000, 500, 200, 50]],
+  ["Committer", "commits", cc.totalCommitContributions, [500, 200, 100, 30]],
+  ["Builder", "public repos", u.repositories.totalCount, [50, 30, 15, 5]],
+  ["Polyglot", "languages", langTotals.size, [10, 7, 4, 2]],
+  ["Veteran", "years", years, [8, 5, 3, 1]],
+  ["Collaborator", "pull requests", cc.totalPullRequestContributions, [100, 30, 10, 1]],
+];
+const hex = (r) =>
+  Array.from({ length: 6 }, (_, i) => {
+    const a = (Math.PI / 3) * i - Math.PI / 2;
+    return `${(r * Math.cos(a)).toFixed(1)},${(r * Math.sin(a)).toFixed(1)}`;
+  }).join(" ");
+const tierFill = { S: RED, A: "#b91c1c", B: "#7f1d1d", C: "#450a0a", "?": "#161b22" };
+const trophyItems = trophies
+  .map(([name, unit, value, th], i) => {
+    const t = tier(value, th);
+    return `<g transform="translate(${95 + i * 160}, 105)">
+  <polygon points="${hex(44)}" fill="none" stroke="${t === "?" ? BORDER : RED}" stroke-width="2" ${t === "S" ? 'class="glow"' : ""}/>
+  <polygon points="${hex(36)}" fill="${tierFill[t]}"/>
+  <text y="11" text-anchor="middle" style="font: 900 30px ${FONT}; fill: ${t === "?" ? MUTED : "#ffffff"}">${t}</text>
+  <text y="68" text-anchor="middle" class="v">${esc(name)}</text>
+  <text y="86" text-anchor="middle" class="l">${value.toLocaleString("en-US")} ${esc(unit)}</text>
+</g>`;
+  })
+  .join("\n");
+const trophiesSvg = frame(
+  990,
+  215,
+  "trophies",
+  `<style>.glow { animation: glow 2.5s ease-in-out infinite; } @keyframes glow { 50% { stroke-opacity: .3; } }</style>
+${trophyItems}`
+);
+
 mkdirSync(outDir, { recursive: true });
 writeFileSync(`${outDir}/stats.svg`, statsSvg);
 writeFileSync(`${outDir}/langs.svg`, langsSvg);
 writeFileSync(`${outDir}/activity.svg`, activitySvg);
-console.log(`Wrote stats.svg, langs.svg, activity.svg to ${outDir}`);
+writeFileSync(`${outDir}/trophies.svg`, trophiesSvg);
+console.log(`Wrote stats.svg, langs.svg, activity.svg, trophies.svg to ${outDir}`);

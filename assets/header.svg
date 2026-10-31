@@ -18,7 +18,7 @@
       <stop offset="1" stop-color="#dc2626" stop-opacity="0.6"/>
     </linearGradient>
     <clipPath id="moonCut">
-      <circle cx="930" cy="200" r="120"/>
+      <circle cx="930" cy="168" r="132"/>
     </clipPath>
     <clipPath id="typeClip">
       <rect x="80" y="196" width="0" height="34">
@@ -51,7 +51,9 @@
       @keyframes blink { 50% { opacity: 0; } }
       .star { animation: tw 3s ease-in-out infinite; }
       @keyframes tw { 50% { opacity: 0.2; } }
-      .pulse { animation: pulse 4s ease-in-out infinite; transform-origin: 930px 200px; }
+      .pulse { animation: pulse 4s ease-in-out infinite; transform-origin: 930px 168px; }
+      .howl { opacity: 0; animation: howl 2.4s ease-out infinite; }
+      @keyframes howl { 0% { opacity: 0; transform: translate(0, 0); } 20% { opacity: .9; } 100% { opacity: 0; transform: translate(-10px, -14px); } }
       @keyframes pulse { 50% { transform: scale(1.08); opacity: 0.8; } }
     </style>
   </defs>
@@ -72,19 +74,30 @@
   </g>
 
   <!-- red moon -->
-  <circle class="pulse" cx="930" cy="200" r="190" fill="url(#moonGlow)"/>
+  <circle class="pulse" cx="930" cy="168" r="205" fill="url(#moonGlow)"/>
   <g clip-path="url(#moonCut)">
-    <rect x="800" y="70" width="260" height="260" fill="url(#moon)"/>
+    <rect x="790" y="30" width="280" height="280" fill="url(#moon)"/>
     <g fill="#05070a">
-      <rect x="800" y="150" width="260" height="5"/>
-      <rect x="800" y="172" width="260" height="7"/>
-      <rect x="800" y="194" width="260" height="9"/>
-      <rect x="800" y="216" width="260" height="12"/>
+      <rect x="790" y="140" width="280" height="4"/>
+      <rect x="790" y="160" width="280" height="6"/>
+      <rect x="790" y="180" width="280" height="8"/>
+      <rect x="790" y="200" width="280" height="10"/>
     </g>
   </g>
 
   <!-- mountain ridge -->
-  <path d="M0 232 L90 196 L150 214 L240 170 L320 206 L400 188 L470 222 L560 200 L640 226 L720 184 L790 210 L860 176 L930 150 L985 190 L1050 168 L1120 204 L1200 186 L1200 232 Z" fill="#05070a"/>
+  <path d="M0 232 L90 196 L150 214 L240 170 L320 206 L400 188 L470 222 L560 200 L640 226 L720 184 L790 212 L840 204 L872 200 L992 200 L1010 212 L1050 192 L1120 204 L1200 186 L1200 232 Z" fill="#05070a"/>
+
+
+  <!-- howling wolf on the cliff -->
+  <g transform="translate(862, 42)">
+    <g fill="none" stroke="#fca5a5" stroke-width="2.2" stroke-linecap="round">
+      <path class="howl" d="M4 -8 Q2 -16 10 -20"/>
+      <path class="howl" d="M-4 -4 Q-8 -20 6 -28" style="animation-delay:.6s"/>
+      <path class="howl" d="M-12 0 Q-18 -24 2 -36" style="animation-delay:1.2s"/>
+    </g>
+    <path class="wolf" fill="#05070a" transform="scale(0.62)" d="M28 -4 C 46 4, 62 18, 72 28 L 78 25 L 90 8 L 94 24 L 97 36 C 104 44, 108 52, 112 60 L 120 64 L 117 70 L 126 76 L 121 81 L 130 90 C 150 120, 172 160, 172 200 C 190 204, 206 222, 206 252 C 190 246, 176 246, 162 254 L 160 258 L 84 258 C 72 258, 70 248, 82 246 C 84 220, 84 196, 82 176 C 80 156, 74 138, 66 122 L 70 116 L 62 110 L 66 104 L 58 98 C 54 86, 52 76, 50 66 C 46 54, 40 44, 32 34 L 14 14 L 40 24 L 24 2 Z"/>
+  </g>
 
   <!-- synthwave floor -->
   <rect x="0" y="232" width="1200" height="88" fill="#05070a"/>
