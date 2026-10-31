@@ -13,7 +13,7 @@
 
 <br/>
 
-<img src="./assets/panel-whoami.svg" width="100%" alt="whoami: Russel Carlo, NU Fairview IT, AWS Certified AI Practitioner, Microsoft Fabric Data Engineer Associate" />
+<img src="./assets/panel-whoami-v2.svg" width="100%" alt="whoami: Russel Carlo, NU Fairview IT, AWS Certified AI Practitioner, Microsoft Fabric Data Engineer Associate" />
 
 <img src="./assets/h-wins.svg" width="100%" alt="Wins" />
 
@@ -34,9 +34,13 @@
 
 <img src="./assets/h-arsenal.svg" width="100%" alt="Arsenal" />
 
-<img src="./assets/panel-arsenal.svg" width="100%" alt="Tech stack: AI / agentic coding with Claude, Codex, Gemini, Antigravity, Ollama, OpenRouter, OpenCode, OmniRoute, Kiro; AWS, Azure, Docker, Kubernetes, Terraform, GitHub Actions, Linux, Python, TypeScript, JavaScript, Kotlin, React, Next.js, Tailwind, Node.js, Express, PostgreSQL, MongoDB, Firebase, Vercel" />
+<img src="./assets/panel-arsenal-v2.svg" width="100%" alt="Tech stack: AI / agentic coding with Claude, Codex, Gemini, Antigravity, Ollama, OpenRouter, OpenCode, OmniRoute, Kiro; AWS, Azure, Docker, Kubernetes, Terraform, GitHub Actions, Linux, Python, TypeScript, JavaScript, Kotlin, React, Next.js, Tailwind, Node.js, Express, PostgreSQL, MongoDB, Firebase, Vercel" />
 
-<img src="./assets/h-builds.svg" width="100%" alt="Featured Builds" />
+<img src="./assets/h-flow.svg" width="100%" alt="Agentic Workflow" />
+
+<img src="./assets/panel-flow.svg" width="100%" alt="Agentic workflow: Kiro specs → Claude Code, Codex, OpenCode, Antigravity build → OpenRouter, Ollama, OmniRoute, Gemini models → Playwright, pytest, evals → GitHub Actions, Terraform, AWS" />
+
+<img src="./assets/h-builds-v2.svg" width="100%" alt="Featured Builds" />
 
 <p align="center">
 <a href="https://github.com/n0zzzy/kiro-sdlc-agent-harness"><img src="./assets/build-1.svg" width="49%" alt="kiro-sdlc-agent-harness" /></a>
@@ -56,7 +60,7 @@
 <a href="https://github.com/n0zzzy/aws-multi-agent-choreography"><img src="./assets/more-6.svg" width="32%" alt="aws-multi-agent-choreography" /></a>
 </p>
 
-<img src="./assets/h-stats.svg" width="100%" alt="Stats" />
+<img src="./assets/h-stats-v2.svg" width="100%" alt="Stats" />
 
 <div align="center">
 

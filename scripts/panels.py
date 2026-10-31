@@ -95,7 +95,7 @@ def whoami():
         ("🎓", "AWS AI & ML Scholar", " · top 4,500 globally"),
         ("🤖", "Shipping multi-agent systems", " on AWS"),
         ("☸️", "Running AI agents", " on Kubernetes (EKS)"),
-        ("🔁", "Automating everything", " with GitHub Actions"),
+        ("⚡", "Agentic coding", " with Claude, Codex & Kiro"),
         ("📱", "Building web + mobile", " (PWA) apps"),
     ]
     cur = [f'<text x="580" y="78" class="tag{u}">// CURRENTLY</text>']
@@ -275,6 +275,43 @@ def arsenal():
     return frame(w, h, "SYS://ARSENAL", "".join(rows), u)
 
 
+def workflow():
+    w, h, u = 1000, 275, "flw"
+    stages = [
+        ("01 · SPEC", "Kiro", "specs · steering · tasks"),
+        ("02 · BUILD", "Claude Code · Codex", "OpenCode · Antigravity"),
+        ("03 · MODELS", "OpenRouter · Ollama", "OmniRoute · Gemini"),
+        ("04 · TEST", "Playwright · pytest", "evals · security review"),
+        ("05 · SHIP", "GitHub Actions", "Terraform → AWS"),
+    ]
+    bw, gap, x0, y0, bh = 168, 28, 30, 92, 104
+    parts = []
+    line_y = y0 + bh / 2
+    track_y = y0 + bh + 18
+    parts.append(f'<line x1="{x0 + bw / 2}" y1="{track_y}" x2="{x0 + 4 * (bw + gap) + bw / 2}" y2="{track_y}" stroke="{RED}" stroke-opacity="0.45" stroke-width="2" stroke-dasharray="4 6"/>')
+    for i, (tag, main, sub) in enumerate(stages):
+        x = x0 + i * (bw + gap)
+        hi = i == 1
+        parts.append(f'<rect x="{x}" y="{y0}" width="{bw}" height="{bh}" rx="8" fill="{"#2a0a0c" if hi else "#0d1117"}" fill-opacity="0.95" stroke="{RED}" stroke-opacity="{0.8 if hi else 0.35}" {"class=\"pulse" + u + "\"" if hi else ""}/>')
+        parts.append(f'<rect x="{x}" y="{y0}" width="{bw}" height="4" rx="2" fill="{RED}"/>')
+        parts.append(f'<text x="{x + bw / 2}" y="{y0 + 30}" text-anchor="middle" class="tag{u}">{escape(tag)}</text>')
+        parts.append(f'<text x="{x + bw / 2}" y="{y0 + 58}" text-anchor="middle" style="font: 700 14px {FONT}; fill: {TEXT}">{escape(main)}</text>')
+        parts.append(f'<text x="{x + bw / 2}" y="{y0 + 80}" text-anchor="middle" class="b{u}" style="font-size:12px">{escape(sub)}</text>')
+        parts.append(f'<line x1="{x + bw / 2}" y1="{y0 + bh}" x2="{x + bw / 2}" y2="{track_y}" stroke="{RED}" stroke-opacity="0.45" stroke-width="1.5"/>')
+        if i:
+            ax = x - gap
+            parts.append(f'<path d="M{ax + 6} {line_y} L{x - 4} {line_y}" stroke="{RED}" stroke-width="2.5"/><path d="M{x - 10} {line_y - 5} L{x - 3} {line_y} L{x - 10} {line_y + 5}" fill="none" stroke="{RED}" stroke-width="2.5"/>')
+    # travelling packets
+    total = 4 * (bw + gap)
+    for k in range(3):
+        parts.append(f'<circle cx="{x0 + bw / 2}" cy="{track_y}" r="5" fill="#fff" class="pk{u}" style="animation-delay:{k * 1.5}s"/>')
+    parts.append(f'''<style>.pk{u} {{ opacity: 0; animation: pk{u} 4.5s linear infinite; filter: drop-shadow(0 0 6px {RED}); }}
+@keyframes pk{u} {{ 0% {{ transform: translateX(0); opacity: 0; }} 5% {{ opacity: 1; }} 95% {{ opacity: 1; }} 100% {{ transform: translateX({total}px); opacity: 0; }} }}</style>''')
+    parts.append(f'<text x="30" y="66" style="font: 400 13px {MONO}; fill: {MUTED}">$ how n0zzzy ships: <tspan fill="{PINK}">spec-driven, agent-built, human-approved</tspan><tspan class="blink{u}" fill="{RED}"> █</tspan></text>')
+    parts.append(f'<text x="30" y="{h - 22}" style="font: 400 12px {MONO}; fill: {MUTED}">humans own the spec and the approve-deploy gate · agents do the rest</text>')
+    return frame(w, h, "SYS://AGENTIC_WORKFLOW", "".join(parts), u)
+
+
 WOLF = "M28 -4 C 46 4, 62 18, 72 28 L 78 25 L 90 8 L 94 24 L 97 36 C 104 44, 108 52, 112 60 L 120 64 L 117 70 L 126 76 L 121 81 L 130 90 C 150 120, 172 160, 172 200 C 190 204, 206 222, 206 252 C 190 246, 176 246, 162 254 L 160 258 L 84 258 C 72 258, 70 248, 82 246 C 84 220, 84 196, 82 176 C 80 156, 74 138, 66 122 L 70 116 L 62 110 L 66 104 L 58 98 C 54 86, 52 76, 50 66 C 46 54, 40 44, 32 34 L 14 14 L 40 24 L 24 2 Z"
 
 
@@ -315,16 +352,18 @@ def main():
         "h-wins.svg": heading("wins", "Wins", "01"),
         "h-certs.svg": heading("certs", "Certifications", "02"),
         "h-arsenal.svg": heading("ars", "Arsenal", "03"),
-        "h-builds.svg": heading("builds", "Featured Builds", "04"),
-        "h-stats.svg": heading("stats", "Stats", "05"),
-        "panel-arsenal.svg": arsenal(),
+        "h-flow.svg": heading("flow", "Agentic Workflow", "04"),
+        "h-builds-v2.svg": heading("builds", "Featured Builds", "05"),
+        "h-stats-v2.svg": heading("stats", "Stats", "06"),
+        "panel-arsenal-v2.svg": arsenal(),
+        "panel-flow.svg": workflow(),
         "build-1.svg": build(1, "kiro-sdlc-agent-harness", "An orchestrator drives 7 specialist AI agents through the full SDLC, from a plain-English request to a live, deployed AWS app, with human approval gates.", ["Kiro", "Multi-Agent", "AWS", "Terraform"], True),
         "build-2.svg": build(2, "novamart-multi-agent-agentcore", "5-agent customer support with parallel multi-agent RAG, guardrails, shared state, and CloudWatch/X-Ray observability on Bedrock AgentCore.", ["Python", "AgentCore", "Strands", "RAG"]),
         "build-3.svg": build(3, "production-ready-ai-agents-eks", "Enterprise AI agent platform on EKS + Bedrock: self-managed vs managed tracks behind a model-agnostic LiteLLM plane.", ["EKS", "Kubernetes", "LiteLLM", "Terraform"]),
         "build-4.svg": build(4, "cloudops-sentry", "Autonomous DevOps & SRE agent that prevents incidents before they happen. Built for the DevKada x Clanker Cloud challenge.", ["Python", "AI Agent", "SRE"]),
         "build-5.svg": build(5, "ai-customer-support-agent", "Support agent with order tracking & refunds via Gateway/Lambda, RAG, Code Interpreter, web browsing, and long-term memory.", ["Strands", "AgentCore", "Lambda"]),
         "build-6.svg": build(6, "pawfeed-smart-pet-feeder", "Smart pet feeder web + installable PWA with Playwright tests, Allure reports, and CI/CD to Vercel. Live demo available.", ["PWA", "Playwright", "Allure", "Vercel"]),
-        "panel-whoami.svg": whoami(),
+        "panel-whoami-v2.svg": whoami(),
         "win-1.svg": win(1, "1ST", "RANK 1 OVERALL", "+ Best in Technical Solution",
                          "QuickQuest Finale: Build Responsibly · AWS Office, BGC",
                          "Team EPIC 2 built an AI-powered Deployment Checklist Bot on Amazon Quick Suite: 50+ checkpoints across 9 release domains"),
