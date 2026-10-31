@@ -1,0 +1,129 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="320" viewBox="0 0 1200 320">
+  <defs>
+    <linearGradient id="sky" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#05070a"/>
+      <stop offset="0.7" stop-color="#140507"/>
+      <stop offset="1" stop-color="#2a0709"/>
+    </linearGradient>
+    <radialGradient id="moonGlow" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0" stop-color="#dc2626" stop-opacity="0.55"/>
+      <stop offset="1" stop-color="#dc2626" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="moon" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#f87171"/>
+      <stop offset="1" stop-color="#991b1b"/>
+    </linearGradient>
+    <linearGradient id="gridFade" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#dc2626" stop-opacity="0"/>
+      <stop offset="1" stop-color="#dc2626" stop-opacity="0.6"/>
+    </linearGradient>
+    <clipPath id="moonCut">
+      <circle cx="930" cy="200" r="120"/>
+    </clipPath>
+    <clipPath id="typeClip">
+      <rect x="80" y="196" width="0" height="34">
+        <animate attributeName="width" values="0;470;470;0" keyTimes="0;0.4;0.9;1" dur="7s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1"/>
+      </rect>
+    </clipPath>
+    <style>
+      .name { font: 900 76px 'Segoe UI', 'Arial Black', Ubuntu, sans-serif; letter-spacing: 4px; }
+      .sub  { font: 600 20px 'Fira Code', Consolas, 'Courier New', monospace; fill: #f87171; letter-spacing: 2px; }
+      .term { font: 500 22px 'Fira Code', Consolas, 'Courier New', monospace; fill: #e6edf3; }
+      .g1 { animation: g1 3.2s infinite steps(1); }
+      .g2 { animation: g2 3.2s infinite steps(1); }
+      @keyframes g1 {
+        0%, 88%, 100% { transform: translate(0, 0); opacity: 0; }
+        89% { transform: translate(-6px, 2px); opacity: 0.9; }
+        92% { transform: translate(5px, -2px); opacity: 0.9; }
+        95% { transform: translate(-3px, 0); opacity: 0.9; }
+      }
+      @keyframes g2 {
+        0%, 88%, 100% { transform: translate(0, 0); opacity: 0; }
+        89% { transform: translate(6px, -2px); opacity: 0.8; }
+        92% { transform: translate(-5px, 2px); opacity: 0.8; }
+        95% { transform: translate(3px, 1px); opacity: 0.8; }
+      }
+      .scan { animation: scan 4s linear infinite; }
+      @keyframes scan { from { transform: translateY(-20px); } to { transform: translateY(330px); } }
+      .grid { animation: grid 1.6s linear infinite; }
+      @keyframes grid { from { transform: translateY(0); } to { transform: translateY(22px); } }
+      .blink { animation: blink 1s steps(1) infinite; }
+      @keyframes blink { 50% { opacity: 0; } }
+      .star { animation: tw 3s ease-in-out infinite; }
+      @keyframes tw { 50% { opacity: 0.2; } }
+      .pulse { animation: pulse 4s ease-in-out infinite; transform-origin: 930px 200px; }
+      @keyframes pulse { 50% { transform: scale(1.08); opacity: 0.8; } }
+    </style>
+  </defs>
+
+  <rect width="1200" height="320" rx="14" fill="url(#sky)"/>
+
+  <!-- stars -->
+  <g fill="#ffffff">
+    <circle class="star" cx="120" cy="40" r="1.2"/>
+    <circle class="star" cx="260" cy="90" r="1" style="animation-delay:.6s"/>
+    <circle class="star" cx="420" cy="30" r="1.4" style="animation-delay:1.2s"/>
+    <circle class="star" cx="610" cy="70" r="1" style="animation-delay:.3s"/>
+    <circle class="star" cx="700" cy="25" r="1.3" style="animation-delay:1.8s"/>
+    <circle class="star" cx="1080" cy="50" r="1.2" style="animation-delay:.9s"/>
+    <circle class="star" cx="1150" cy="120" r="1" style="animation-delay:2.1s"/>
+    <circle class="star" cx="560" cy="140" r="0.9" style="animation-delay:1.5s"/>
+    <circle class="star" cx="780" cy="110" r="1.1" style="animation-delay:2.4s"/>
+  </g>
+
+  <!-- red moon -->
+  <circle class="pulse" cx="930" cy="200" r="190" fill="url(#moonGlow)"/>
+  <g clip-path="url(#moonCut)">
+    <rect x="800" y="70" width="260" height="260" fill="url(#moon)"/>
+    <g fill="#05070a">
+      <rect x="800" y="150" width="260" height="5"/>
+      <rect x="800" y="172" width="260" height="7"/>
+      <rect x="800" y="194" width="260" height="9"/>
+      <rect x="800" y="216" width="260" height="12"/>
+    </g>
+  </g>
+
+  <!-- mountain ridge -->
+  <path d="M0 232 L90 196 L150 214 L240 170 L320 206 L400 188 L470 222 L560 200 L640 226 L720 184 L790 210 L860 176 L930 150 L985 190 L1050 168 L1120 204 L1200 186 L1200 232 Z" fill="#05070a"/>
+
+  <!-- synthwave floor -->
+  <rect x="0" y="232" width="1200" height="88" fill="#05070a"/>
+  <svg x="0" y="232" width="1200" height="88" overflow="hidden">
+    <g stroke="url(#gridFade)" stroke-width="1.2">
+      <g class="grid">
+        <line x1="0" y1="-22" x2="1200" y2="-22"/>
+        <line x1="0" y1="0" x2="1200" y2="0"/>
+        <line x1="0" y1="22" x2="1200" y2="22"/>
+        <line x1="0" y1="44" x2="1200" y2="44"/>
+        <line x1="0" y1="66" x2="1200" y2="66"/>
+      </g>
+      <line x1="600" y1="0" x2="600" y2="88"/>
+      <line x1="540" y1="0" x2="420" y2="88"/><line x1="660" y1="0" x2="780" y2="88"/>
+      <line x1="480" y1="0" x2="240" y2="88"/><line x1="720" y1="0" x2="960" y2="88"/>
+      <line x1="420" y1="0" x2="60" y2="88"/><line x1="780" y1="0" x2="1140" y2="88"/>
+      <line x1="360" y1="0" x2="-120" y2="88"/><line x1="840" y1="0" x2="1320" y2="88"/>
+      <line x1="300" y1="0" x2="-300" y2="88"/><line x1="900" y1="0" x2="1500" y2="88"/>
+    </g>
+  </svg>
+  <line x1="0" y1="232" x2="1200" y2="232" stroke="#dc2626" stroke-width="2" opacity="0.9"/>
+
+  <!-- name with glitch -->
+  <text x="76" y="130" class="name g1" fill="#22d3ee">RUSSEL CARLO</text>
+  <text x="76" y="130" class="name g2" fill="#dc2626">RUSSEL CARLO</text>
+  <text x="76" y="130" class="name" fill="#ffffff">RUSSEL CARLO</text>
+
+  <text x="80" y="170" class="sub">CLOUD · DEVOPS · FULL-STACK · AI AGENTS</text>
+
+  <!-- terminal line -->
+  <g clip-path="url(#typeClip)">
+    <text x="80" y="220" class="term"><tspan fill="#dc2626">n0zzzy@ph</tspan><tspan fill="#8b949e">:~$</tspan> echo "I have no enemies."</text>
+  </g>
+  <rect class="blink" x="80" y="202" width="12" height="22" fill="#dc2626" opacity="0.85">
+    <animate attributeName="x" values="80;550;550;80" keyTimes="0;0.4;0.9;1" dur="7s" repeatCount="indefinite" calcMode="spline" keySplines="0.4 0 0.2 1;0 0 1 1;0.4 0 0.2 1"/>
+  </rect>
+
+  <!-- scanline -->
+  <rect class="scan" x="0" y="0" width="1200" height="3" fill="#ffffff" opacity="0.04"/>
+
+  <rect x="1" y="1" width="1198" height="318" rx="14" fill="none" stroke="#dc2626" stroke-opacity="0.35" stroke-width="2"/>
+</svg>
