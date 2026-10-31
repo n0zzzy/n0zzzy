@@ -53,7 +53,7 @@
 <g class="fade" transform="translate(25, 162)">
   <rect y="-9" width="6" height="6" rx="1" fill="#dc2626"/>
   <text x="16" y="0" class="l">Followers</text>
-  <text x="250" y="0" class="v" text-anchor="end">6</text>
+  <text x="250" y="0" class="v" text-anchor="end">7</text>
 </g>
 <g transform="translate(395, 115)">
   <circle r="40" fill="none" stroke="#30363d" stroke-width="6"/>
