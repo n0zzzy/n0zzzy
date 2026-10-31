@@ -4,6 +4,7 @@
 
 <br/>
 
+<a href="https://russelcarlo.vercel.app"><img src="https://img.shields.io/badge/Portfolio-russelcarlo.vercel.app-dc2626?style=for-the-badge&logo=vercel&logoColor=white&labelColor=0d1117" /></a>
 <a href="https://www.linkedin.com/in/russelcarlo"><img src="https://img.shields.io/badge/LinkedIn-0d1117?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2RjMjYyNiI%2BPGNpcmNsZSBjeD0iNS4yIiBjeT0iNS4yIiByPSIyLjQiLz48cmVjdCB4PSIzIiB5PSI5IiB3aWR0aD0iNC40IiBoZWlnaHQ9IjEyIi8%2BPHBhdGggZD0iTTEwIDloNC4ydjEuOGMuNi0xLjEgMi0yLjEgNC0yLjEgNCAwIDQuOCAyLjYgNC44IDZWMjFoLTQuNHYtNS42YzAtMS40IDAtMy4xLTEuOS0zLjFzLTIuMiAxLjUtMi4yIDNWMjFIMTB6Ii8%2BPC9zdmc%2B" /></a>
 <a href="mailto:manzoncarlo345@gmail.com"><img src="https://img.shields.io/badge/Email-0d1117?style=for-the-badge&logo=gmail&logoColor=dc2626" /></a>
 <a href="https://discord.com/users/n0zzy_"><img src="https://img.shields.io/badge/Discord-0d1117?style=for-the-badge&logo=discord&logoColor=dc2626" /></a>
