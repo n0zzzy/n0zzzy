@@ -1,0 +1,48 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="495" height="215" viewBox="0 0 495 215">
+<style>
+  .t { font: 600 16px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #dc2626; }
+  .l { font: 400 13px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #8b949e; }
+  .v { font: 700 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #e6edf3; }
+  .big { font: 800 40px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #e6edf3; }
+  .fade { animation: fade .6s ease-out; }
+  @keyframes fade { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: none; } }
+  @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes ring { from { stroke-dashoffset: 251; } }
+</style>
+<rect x="0.5" y="0.5" width="494" height="214" rx="10" fill="#0d1117" stroke="#30363d"/>
+<rect x="0.5" y="0.5" width="4" height="214" rx="2" fill="#dc2626"/>
+<text x="25" y="34" class="t">n0zzzy // github stats</text>
+<g class="fade" transform="translate(25, 62)">
+  <rect y="-9" width="6" height="6" rx="1" fill="#dc2626"/>
+  <text x="16" y="0" class="l">Contributions (last year)</text>
+  <text x="250" y="0" class="v" text-anchor="end">72</text>
+</g>
+<g class="fade" transform="translate(25, 87)">
+  <rect y="-9" width="6" height="6" rx="1" fill="#dc2626"/>
+  <text x="16" y="0" class="l">Commits (last year)</text>
+  <text x="250" y="0" class="v" text-anchor="end">51</text>
+</g>
+<g class="fade" transform="translate(25, 112)">
+  <rect y="-9" width="6" height="6" rx="1" fill="#dc2626"/>
+  <text x="16" y="0" class="l">Pull Requests</text>
+  <text x="250" y="0" class="v" text-anchor="end">1</text>
+</g>
+<g class="fade" transform="translate(25, 137)">
+  <rect y="-9" width="6" height="6" rx="1" fill="#dc2626"/>
+  <text x="16" y="0" class="l">Public Repositories</text>
+  <text x="250" y="0" class="v" text-anchor="end">21</text>
+</g>
+<g class="fade" transform="translate(25, 162)">
+  <rect y="-9" width="6" height="6" rx="1" fill="#dc2626"/>
+  <text x="16" y="0" class="l">Followers</text>
+  <text x="250" y="0" class="v" text-anchor="end">6</text>
+</g>
+<g transform="translate(395, 115)">
+  <circle r="40" fill="none" stroke="#30363d" stroke-width="6"/>
+  <circle r="40" fill="none" stroke="#dc2626" stroke-width="6" stroke-linecap="round"
+    stroke-dasharray="251" stroke-dashoffset="150.6"
+    transform="rotate(-90)" style="animation: ring 1.2s ease-out"/>
+  <text y="12" class="big" text-anchor="middle">4</text>
+  <text y="62" class="l" text-anchor="middle">years on GitHub</text>
+</g>
+</svg>
