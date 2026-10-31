@@ -32,7 +32,7 @@
 <text x="25" y="32" class="t">contribution streak</text>
 <g transform="translate(170, 0)">
   <rect x="-145" y="50" width="290" height="132" rx="8" fill="#0d1117" fill-opacity=".9" stroke="#dc2626" stroke-opacity="0.22"/>
-  <text y="120" text-anchor="middle" style="font: 800 40px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #e6edf3">387</text>
+  <text y="120" text-anchor="middle" style="font: 800 40px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #e6edf3">388</text>
   <text y="80" text-anchor="middle" style="font: 600 11px 'Fira Code', Consolas, monospace; fill: #dc2626; letter-spacing: 2px">TOTAL CONTRIBUTIONS</text>
   <text y="160" text-anchor="middle" class="l">Jan 1, 2022 → present</text>
 </g>
