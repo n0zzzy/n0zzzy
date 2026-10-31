@@ -238,8 +238,43 @@ def arsenal():
     return frame(w, h, "SYS://ARSENAL", "".join(rows), u)
 
 
+WOLF = "M28 -4 C 46 4, 62 18, 72 28 L 78 25 L 90 8 L 94 24 L 97 36 C 104 44, 108 52, 112 60 L 120 64 L 117 70 L 126 76 L 121 81 L 130 90 C 150 120, 172 160, 172 200 C 190 204, 206 222, 206 252 C 190 246, 176 246, 162 254 L 160 258 L 84 258 C 72 258, 70 248, 82 246 C 84 220, 84 196, 82 176 C 80 156, 74 138, 66 122 L 70 116 L 62 110 L 66 104 L 58 98 C 54 86, 52 76, 50 66 C 46 54, 40 44, 32 34 L 14 14 L 40 24 L 24 2 Z"
+
+
+def mini(n, title, sub):
+    w, h, u = 320, 92, f"m{n}"
+    body = f'''
+  <rect x="12" y="38" width="{w - 24}" height="{h - 50}" rx="6" fill="#0d1117" fill-opacity="0.9" stroke="{RED}" stroke-opacity="0.22"/>
+  <text x="26" y="60" style="font: 700 14px {FONT}; fill: {TEXT}">{escape(title)}</text>
+  <text x="26" y="76" class="b{u}" style="font-size:11.5px">{escape(sub)}</text>
+  <text x="{w - 24}" y="60" text-anchor="end" class="m{u}" fill="{PINK}" style="font-size:11px; font-weight:700">▸</text>'''
+    return frame(w, h, f"MORE://0{n}", body, u)
+
+
+def footer():
+    w, h, u = 1000, 190, "ft"
+    body = f'''
+  <g clip-path="url(#mclipft)"><rect x="780" y="50" width="160" height="160" fill="url(#moonft)"/>
+  <rect x="780" y="112" width="160" height="4" fill="#06080c"/><rect x="780" y="126" width="160" height="6" fill="#06080c"/><rect x="780" y="142" width="160" height="8" fill="#06080c"/></g>
+  <path d="M700 190 L760 166 L800 176 L840 160 L900 170 L950 158 L1000 168 L1000 190 Z" fill="#05070a"/>
+  <g transform="translate(822, 66) scale(0.4)"><path fill="#05070a" d="{WOLF}"/></g>
+  <text x="40" y="84" style="font: 800 30px {FONT}; fill: {TEXT}; letter-spacing: 1px">"I have no enemies."</text>
+  <text x="40" y="114" class="m{u}" fill="{PINK}">n0zzzy@ph:~$ exit 0<tspan class="blink{u}" fill="{RED}"> █</tspan></text>
+  <text x="40" y="150" class="m{u}" fill="{MUTED}" style="font-size:12px">Cloud · DevOps · Full-Stack · AI Agents  //  Philippines</text>'''
+    svg = frame(w, h, "EOF://N0ZZZY", body, u)
+    moon = f'<radialGradient id="moonft" cx=".5" cy=".3" r=".7"><stop offset="0" stop-color="#f87171"/><stop offset="1" stop-color="#991b1b"/></radialGradient><clipPath id="mclipft"><circle cx="860" cy="128" r="70"/></clipPath>'
+    return svg.replace("<defs>", "<defs>" + moon, 1)
+
+
 def main():
     files = {
+        "footer.svg": footer(),
+        "more-1.svg": mini(1, "EKS + Karpenter Lab", "Gateway API · Karpenter · EBS · Fluent Bit"),
+        "more-2.svg": mini(2, "Azure AI Foundry Agent", "Code Interpreter · Web Search · streaming"),
+        "more-3.svg": mini(3, "Bedrock Flows Router", "classify · FAQ · bug tickets · guardrails"),
+        "more-4.svg": mini(4, "PH Flood Control Dashboard", "DuckDB-WASM · sub-100 ms · React"),
+        "more-5.svg": mini(5, "Step Functions Orchestration", "parallel agents · human-in-the-loop"),
+        "more-6.svg": mini(6, "EventBridge Choreography", "event-driven agents · pub/sub"),
         "h-wins.svg": heading("wins", "Wins", "01"),
         "h-certs.svg": heading("certs", "Certifications", "02"),
         "h-arsenal.svg": heading("ars", "Arsenal", "03"),

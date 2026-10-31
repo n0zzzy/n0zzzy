@@ -47,7 +47,14 @@
 <a href="https://github.com/n0zzzy/pawfeed-smart-pet-feeder"><img src="./assets/build-6.svg" width="49%" alt="pawfeed-smart-pet-feeder" /></a>
 </p>
 
-<p align="center"><sub><b>More builds:</b> <a href="https://github.com/n0zzzy/aws-eks-workshop">☸️ EKS + Karpenter lab</a> · <a href="https://github.com/n0zzzy/azure-ai-foundry-multitool-agent">🔷 Azure AI Foundry agent</a> · <a href="https://github.com/n0zzzy/aws-bedrock-customer-support-flow">🔁 Bedrock Flows router</a> · <a href="https://github.com/n0zzzy/kiro-ph-data-dashboard">🌊 PH flood control dashboard</a> · <a href="https://github.com/n0zzzy/aws-multi-agent-orchestration">🎛️ Step Functions orchestration</a> · <a href="https://github.com/n0zzzy/aws-multi-agent-choreography">🔀 EventBridge choreography</a></sub></p>
+<p align="center">
+<a href="https://github.com/n0zzzy/aws-eks-workshop"><img src="./assets/more-1.svg" width="32%" alt="aws-eks-workshop" /></a>
+<a href="https://github.com/n0zzzy/azure-ai-foundry-multitool-agent"><img src="./assets/more-2.svg" width="32%" alt="azure-ai-foundry-multitool-agent" /></a>
+<a href="https://github.com/n0zzzy/aws-bedrock-customer-support-flow"><img src="./assets/more-3.svg" width="32%" alt="aws-bedrock-customer-support-flow" /></a>
+<a href="https://github.com/n0zzzy/kiro-ph-data-dashboard"><img src="./assets/more-4.svg" width="32%" alt="kiro-ph-data-dashboard" /></a>
+<a href="https://github.com/n0zzzy/aws-multi-agent-orchestration"><img src="./assets/more-5.svg" width="32%" alt="aws-multi-agent-orchestration" /></a>
+<a href="https://github.com/n0zzzy/aws-multi-agent-choreography"><img src="./assets/more-6.svg" width="32%" alt="aws-multi-agent-choreography" /></a>
+</p>
 
 <img src="./assets/h-stats.svg" width="100%" alt="Stats" />
 
@@ -60,7 +67,7 @@
 
 <img src="./generated/activity.svg" width="98%" alt="Contribution activity" />
 
-<img src="https://streak-stats.demolab.com?user=n0zzzy&theme=dark&hide_border=true&background=0D1117&ring=DC2626&fire=DC2626&currStreakLabel=DC2626&sideLabels=FFFFFF&dates=8B949E&currStreakNum=FFFFFF&sideNums=FFFFFF" width="98%" alt="GitHub streak" />
+<img src="./generated/streak.svg" width="98%" alt="Contribution streak" />
 
 <br/><br/>
 
@@ -68,6 +75,6 @@
 
 <br/>
 
-<sub>🐺 <i>"I have no enemies."</i> — widgets self-generated every 6 hours via GitHub Actions</sub>
+<a href="https://www.linkedin.com/in/russelcarlo"><img src="./assets/footer.svg" width="100%" alt="I have no enemies. — n0zzzy" /></a>
 
 </div>

@@ -12,6 +12,7 @@ const BG = "#0d1117";
 const BORDER = "#30363d";
 const TEXT = "#e6edf3";
 const MUTED = "#8b949e";
+const MONO = "'Fira Code', Consolas, monospace";
 const FONT = "'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif";
 
 async function gql(query, variables) {
@@ -82,19 +83,37 @@ const langSum = langs.reduce((s, [, v]) => s + v.size, 0) || 1;
 const esc = (s) => String(s).replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;");
 
 const frame = (w, h, title, body) => `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}">
+<defs>
+  <linearGradient id="cbg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#06080c"/><stop offset=".6" stop-color="#0b0a10"/><stop offset="1" stop-color="#1c0609"/></linearGradient>
+  <radialGradient id="cglow" cx="1" cy="0" r=".9"><stop offset="0" stop-color="${RED}" stop-opacity=".25"/><stop offset="1" stop-color="${RED}" stop-opacity="0"/></radialGradient>
+  <pattern id="cgrid" width="26" height="26" patternUnits="userSpaceOnUse"><path d="M26 0 L0 0 0 26" fill="none" stroke="${RED}" stroke-opacity=".07"/></pattern>
+  <pattern id="cscan" width="4" height="4" patternUnits="userSpaceOnUse"><rect width="4" height="1" fill="#000" fill-opacity=".35"/></pattern>
+  <clipPath id="cclip"><rect width="${w}" height="${h}" rx="10"/></clipPath>
+</defs>
 <style>
-  .t { font: 600 16px ${FONT}; fill: ${RED}; }
+  .t { font: 600 11px ${MONO}; fill: ${RED}; letter-spacing: 2px; text-transform: uppercase; }
   .l { font: 400 13px ${FONT}; fill: ${MUTED}; }
   .v { font: 700 14px ${FONT}; fill: ${TEXT}; }
   .big { font: 800 40px ${FONT}; fill: ${TEXT}; }
   .fade { animation: fade .6s ease-out; }
+  .sweep { animation: sweep 5s linear infinite; }
+  .pulse { animation: pulse 2.6s ease-in-out infinite; }
   @keyframes fade { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: none; } }
   @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
   @keyframes ring { from { stroke-dashoffset: 251; } }
+  @keyframes sweep { from { transform: translateY(-40px); } to { transform: translateY(${h + 40}px); } }
+  @keyframes pulse { 50% { stroke-opacity: .25; } }
 </style>
-<rect x="0.5" y="0.5" width="${w - 1}" height="${h - 1}" rx="10" fill="${BG}" stroke="${BORDER}"/>
-<rect x="0.5" y="0.5" width="4" height="${h - 1}" rx="2" fill="${RED}"/>
-<text x="25" y="34" class="t">${esc(title)}</text>
+<g clip-path="url(#cclip)">
+  <rect width="${w}" height="${h}" fill="url(#cbg)"/>
+  <rect width="${w}" height="${h}" fill="url(#cgrid)"/>
+  <rect width="${w}" height="${h}" fill="url(#cglow)"/>
+  <rect width="${w}" height="${h}" fill="url(#cscan)"/>
+  <rect class="sweep" width="${w}" height="40" fill="${RED}" fill-opacity=".05"/>
+</g>
+<rect x=".5" y=".5" width="${w - 1}" height="${h - 1}" rx="10" fill="none" stroke="${RED}" stroke-opacity=".45" class="pulse"/>
+<g stroke="${RED}" stroke-width="3" fill="none"><path d="M2 20 V2 H20"/><path d="M${w - 20} 2 H${w - 2} V20"/><path d="M2 ${h - 20} V${h - 2} H20"/><path d="M${w - 20} ${h - 2} H${w - 2} V${h - 20}"/></g>
+<text x="25" y="32" class="t">${esc(title)}</text>
 ${body}
 </svg>`;
 
@@ -228,9 +247,62 @@ const trophiesSvg = frame(
 ${trophyItems}`
 );
 
+// --- streak card (all-time calendar) ---
+const allDays = [];
+let totalAll = 0;
+const startYear = new Date(u.createdAt).getUTCFullYear();
+for (let y = startYear; y <= new Date().getUTCFullYear(); y++) {
+  const yd = await gql(
+    `query($login: String!, $from: DateTime!, $to: DateTime!) {
+      user(login: $login) { contributionsCollection(from: $from, to: $to) {
+        restrictedContributionsCount
+        contributionCalendar { totalContributions weeks { contributionDays { date contributionCount } } }
+      } }
+    }`,
+    { login, from: `${y}-01-01T00:00:00Z`, to: `${y}-12-31T23:59:59Z` }
+  );
+  const ycc = yd.user.contributionsCollection;
+  totalAll += ycc.contributionCalendar.totalContributions + ycc.restrictedContributionsCount;
+  allDays.push(...ycc.contributionCalendar.weeks.flatMap((w) => w.contributionDays));
+}
+const today = new Date().toISOString().slice(0, 10);
+const cal = [...new Map(allDays.filter((d) => d.date <= today).map((d) => [d.date, d.contributionCount])).entries()].sort();
+let longest = { len: 0, start: "", end: "" };
+let run = { len: 0, start: "" };
+for (const [date, c] of cal) {
+  if (c > 0) {
+    run = run.len ? { len: run.len + 1, start: run.start } : { len: 1, start: date };
+    if (run.len > longest.len) longest = { len: run.len, start: run.start, end: date };
+  } else run = { len: 0, start: "" };
+}
+let i = cal.length - 1;
+if (i >= 0 && cal[i][1] === 0) i--; // today not counted yet
+let current = { len: 0, start: "", end: i >= 0 ? cal[i][0] : "" };
+while (i >= 0 && cal[i][1] > 0) {
+  current = { ...current, len: current.len + 1, start: cal[i][0] };
+  i--;
+}
+const fmt = (d) => (d ? new Date(`${d}T00:00:00Z`).toLocaleDateString("en-US", { month: "short", day: "numeric", year: "numeric", timeZone: "UTC" }) : "-");
+const fmtRange = (a, b) => (a ? (a === b ? fmt(a) : `${fmt(a)} → ${fmt(b)}`) : "no streak yet");
+const col = (x, label, value, sub, hi) => `<g transform="translate(${x}, 0)">
+  <rect x="-145" y="50" width="290" height="132" rx="8" fill="#0d1117" fill-opacity=".9" stroke="${RED}" stroke-opacity="${hi ? 0.6 : 0.22}"/>
+  <text y="${hi ? 126 : 120}" text-anchor="middle" style="font: 800 ${hi ? 48 : 40}px ${FONT}; fill: ${hi ? RED : TEXT}">${value.toLocaleString("en-US")}</text>
+  <text y="80" text-anchor="middle" style="font: 600 11px ${MONO}; fill: ${hi ? "#fca5a5" : RED}; letter-spacing: 2px">${esc(label)}</text>
+  <text y="160" text-anchor="middle" class="l">${esc(sub)}</text>
+</g>`;
+const streakSvg = frame(
+  990,
+  200,
+  "contribution streak",
+  `${col(170, "TOTAL CONTRIBUTIONS", totalAll, `${fmt(cal[0]?.[0])} → present`)}
+${col(495, "🔥 CURRENT STREAK", current.len, fmtRange(current.start, current.end), true)}
+${col(820, "LONGEST STREAK", longest.len, fmtRange(longest.start, longest.end))}`
+);
+
 mkdirSync(outDir, { recursive: true });
 writeFileSync(`${outDir}/stats.svg`, statsSvg);
 writeFileSync(`${outDir}/langs.svg`, langsSvg);
 writeFileSync(`${outDir}/activity.svg`, activitySvg);
 writeFileSync(`${outDir}/trophies.svg`, trophiesSvg);
-console.log(`Wrote stats.svg, langs.svg, activity.svg, trophies.svg to ${outDir}`);
+writeFileSync(`${outDir}/streak.svg`, streakSvg);
+console.log(`Wrote stats.svg, langs.svg, activity.svg, trophies.svg, streak.svg to ${outDir}`);

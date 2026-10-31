@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="190" viewBox="0 0 1000 190">
+<defs><radialGradient id="moonft" cx=".5" cy=".3" r=".7"><stop offset="0" stop-color="#f87171"/><stop offset="1" stop-color="#991b1b"/></radialGradient><clipPath id="mclipft"><circle cx="860" cy="128" r="70"/></clipPath>
+  <linearGradient id="bgft" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#06080c"/><stop offset="0.6" stop-color="#0b0a10"/><stop offset="1" stop-color="#1c0609"/>
+  </linearGradient>
+  <radialGradient id="glowft" cx="1" cy="0" r="0.9">
+    <stop offset="0" stop-color="#dc2626" stop-opacity="0.28"/><stop offset="1" stop-color="#dc2626" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="gridft" width="26" height="26" patternUnits="userSpaceOnUse">
+    <path d="M26 0 L0 0 0 26" fill="none" stroke="#dc2626" stroke-opacity="0.07"/>
+  </pattern>
+  <pattern id="scanft" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="#000" fill-opacity="0.35"/>
+  </pattern>
+  <clipPath id="clipft"><rect width="1000" height="190" rx="10"/></clipPath>
+  <style>
+    .tft { font: 700 17px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc; }
+    .bft { font: 400 13.5px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #9aa4b2; }
+    .mft { font: 500 13px 'Fira Code', Consolas, 'Courier New', monospace; }
+    .tagft { font: 600 11px 'Fira Code', Consolas, 'Courier New', monospace; fill: #dc2626; letter-spacing: 2px; }
+    .sweepft { animation: swft 5s linear infinite; }
+    @keyframes swft { from { transform: translateY(-40px); } to { transform: translateY(230px); } }
+    .blinkft { animation: blft 1s steps(1) infinite; }
+    @keyframes blft { 50% { opacity: 0; } }
+    .pulseft { animation: puft 2.6s ease-in-out infinite; }
+    @keyframes puft { 50% { stroke-opacity: 0.25; } }
+  </style>
+</defs>
+<g clip-path="url(#clipft)">
+  <rect width="1000" height="190" fill="url(#bgft)"/>
+  <rect width="1000" height="190" fill="url(#gridft)"/>
+  <rect width="1000" height="190" fill="url(#glowft)"/>
+  <rect width="1000" height="190" fill="url(#scanft)"/>
+  <rect class="sweepft" width="1000" height="40" fill="#dc2626" fill-opacity="0.05"/>
+  
+  <g clip-path="url(#mclipft)"><rect x="780" y="50" width="160" height="160" fill="url(#moonft)"/>
+  <rect x="780" y="112" width="160" height="4" fill="#06080c"/><rect x="780" y="126" width="160" height="6" fill="#06080c"/><rect x="780" y="142" width="160" height="8" fill="#06080c"/></g>
+  <path d="M700 190 L760 166 L800 176 L840 160 L900 170 L950 158 L1000 168 L1000 190 Z" fill="#05070a"/>
+  <g transform="translate(822, 66) scale(0.4)"><path fill="#05070a" d="M28 -4 C 46 4, 62 18, 72 28 L 78 25 L 90 8 L 94 24 L 97 36 C 104 44, 108 52, 112 60 L 120 64 L 117 70 L 126 76 L 121 81 L 130 90 C 150 120, 172 160, 172 200 C 190 204, 206 222, 206 252 C 190 246, 176 246, 162 254 L 160 258 L 84 258 C 72 258, 70 248, 82 246 C 84 220, 84 196, 82 176 C 80 156, 74 138, 66 122 L 70 116 L 62 110 L 66 104 L 58 98 C 54 86, 52 76, 50 66 C 46 54, 40 44, 32 34 L 14 14 L 40 24 L 24 2 Z"/></g>
+  <text x="40" y="84" style="font: 800 30px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc; letter-spacing: 1px">"I have no enemies."</text>
+  <text x="40" y="114" class="mft" fill="#fca5a5">n0zzzy@ph:~$ exit 0<tspan class="blinkft" fill="#dc2626"> █</tspan></text>
+  <text x="40" y="150" class="mft" fill="#9aa4b2" style="font-size:12px">Cloud · DevOps · Full-Stack · AI Agents  //  Philippines</text>
+</g>
+<rect x="0.5" y="0.5" width="999" height="189" rx="10" fill="none" stroke="#dc2626" stroke-opacity="0.45" class="pulseft"/>
+<g stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="square">
+  <path d="M2 20 V2 H20"/><path d="M980 2 H998 V20"/>
+  <path d="M2 170 V188 H20"/><path d="M980 188 H998 V170"/>
+</g>
+<text x="22" y="28" class="tagft">EOF://N0ZZZY</text>
+</svg>
