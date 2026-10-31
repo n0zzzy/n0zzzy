@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="490" height="150" viewBox="0 0 490 150">
+<defs>
+  <linearGradient id="bgcudacity" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#06080c"/><stop offset="0.6" stop-color="#0b0a10"/><stop offset="1" stop-color="#1c0609"/>
+  </linearGradient>
+  <radialGradient id="glowcudacity" cx="1" cy="0" r="0.9">
+    <stop offset="0" stop-color="#dc2626" stop-opacity="0.28"/><stop offset="1" stop-color="#dc2626" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="gridcudacity" width="26" height="26" patternUnits="userSpaceOnUse">
+    <path d="M26 0 L0 0 0 26" fill="none" stroke="#dc2626" stroke-opacity="0.07"/>
+  </pattern>
+  <pattern id="scancudacity" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="#000" fill-opacity="0.35"/>
+  </pattern>
+  <clipPath id="clipcudacity"><rect width="490" height="150" rx="10"/></clipPath>
+  <style>
+    .tcudacity { font: 700 17px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc; }
+    .bcudacity { font: 400 13.5px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #9aa4b2; }
+    .mcudacity { font: 500 13px 'Fira Code', Consolas, 'Courier New', monospace; }
+    .tagcudacity { font: 600 11px 'Fira Code', Consolas, 'Courier New', monospace; fill: #dc2626; letter-spacing: 2px; }
+    .sweepcudacity { animation: swcudacity 5s linear infinite; }
+    @keyframes swcudacity { from { transform: translateY(-40px); } to { transform: translateY(190px); } }
+    .blinkcudacity { animation: blcudacity 1s steps(1) infinite; }
+    @keyframes blcudacity { 50% { opacity: 0; } }
+    .pulsecudacity { animation: pucudacity 2.6s ease-in-out infinite; }
+    @keyframes pucudacity { 50% { stroke-opacity: 0.25; } }
+  </style>
+</defs>
+<g clip-path="url(#clipcudacity)">
+  <rect width="490" height="150" fill="url(#bgcudacity)"/>
+  <rect width="490" height="150" fill="url(#gridcudacity)"/>
+  <rect width="490" height="150" fill="url(#glowcudacity)"/>
+  <rect width="490" height="150" fill="url(#scancudacity)"/>
+  <rect class="sweepcudacity" width="490" height="40" fill="#dc2626" fill-opacity="0.05"/>
+  
+  <rect x="16" y="40" width="458" height="94" rx="8" fill="#0d1117" fill-opacity="0.9" stroke="#dc2626" stroke-opacity="0.22"/>
+  <rect x="32" y="54" width="66" height="66" rx="10" fill="#dc2626" class="pulsecudacity" stroke="#fca5a5" stroke-opacity="0.6"/>
+  <g transform="translate(44, 66) scale(1.75)"><path d="M5 3v10a7 7 0 0 0 14 0V3h-4v10a3 3 0 0 1-6 0V3z" fill="#fff"/></g>
+  <text x="116" y="66" class="tagcudacity">UDACITY NANODEGREE</text>
+  <text x="116" y="90" class="tcudacity">Future AWS Agent Engineer</text>
+  <text x="116" y="111" class="bcudacity"><tspan fill="#fca5a5" font-weight="700">AWS AI &amp; ML Scholar</tspan>  ·  top 4,500 globally</text>
+  <text x="460" y="66" text-anchor="end" class="mcudacity" fill="#fca5a5" style="font-size:11px; font-weight:700">VERIFY ▸</text>
+</g>
+<rect x="0.5" y="0.5" width="489" height="149" rx="10" fill="none" stroke="#dc2626" stroke-opacity="0.45" class="pulsecudacity"/>
+<g stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="square">
+  <path d="M2 20 V2 H20"/><path d="M470 2 H488 V20"/>
+  <path d="M2 130 V148 H20"/><path d="M470 148 H488 V130"/>
+</g>
+<text x="22" y="28" class="tagcudacity">CERT://UDACITY</text>
+</svg>

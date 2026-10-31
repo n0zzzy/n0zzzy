@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="410" viewBox="0 0 1000 410">
+<defs>
+  <linearGradient id="bgw" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#06080c"/><stop offset="0.6" stop-color="#0b0a10"/><stop offset="1" stop-color="#1c0609"/>
+  </linearGradient>
+  <radialGradient id="gloww" cx="1" cy="0" r="0.9">
+    <stop offset="0" stop-color="#dc2626" stop-opacity="0.28"/><stop offset="1" stop-color="#dc2626" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="gridw" width="26" height="26" patternUnits="userSpaceOnUse">
+    <path d="M26 0 L0 0 0 26" fill="none" stroke="#dc2626" stroke-opacity="0.07"/>
+  </pattern>
+  <pattern id="scanw" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="#000" fill-opacity="0.35"/>
+  </pattern>
+  <clipPath id="clipw"><rect width="1000" height="410" rx="10"/></clipPath>
+  <style>
+    .tw { font: 700 17px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc; }
+    .bw { font: 400 13.5px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #9aa4b2; }
+    .mw { font: 500 13px 'Fira Code', Consolas, 'Courier New', monospace; }
+    .tagw { font: 600 11px 'Fira Code', Consolas, 'Courier New', monospace; fill: #dc2626; letter-spacing: 2px; }
+    .sweepw { animation: sww 5s linear infinite; }
+    @keyframes sww { from { transform: translateY(-40px); } to { transform: translateY(450px); } }
+    .blinkw { animation: blw 1s steps(1) infinite; }
+    @keyframes blw { 50% { opacity: 0; } }
+    .pulsew { animation: puw 2.6s ease-in-out infinite; }
+    @keyframes puw { 50% { stroke-opacity: 0.25; } }
+  </style>
+</defs>
+<g clip-path="url(#clipw)">
+  <rect width="1000" height="410" fill="url(#bgw)"/>
+  <rect width="1000" height="410" fill="url(#gridw)"/>
+  <rect width="1000" height="410" fill="url(#gloww)"/>
+  <rect width="1000" height="410" fill="url(#scanw)"/>
+  <rect class="sweepw" width="1000" height="40" fill="#dc2626" fill-opacity="0.05"/>
+  
+  <rect x="30" y="50" width="520" height="335" rx="8" fill="#0d1117" fill-opacity="0.92" stroke="#dc2626" stroke-opacity="0.3"/>
+  <rect x="30" y="50" width="520" height="30" rx="8" fill="#161b22"/>
+  <rect x="30" y="72" width="520" height="8" fill="#161b22"/>
+  <circle cx="50" cy="65" r="5" fill="#dc2626"/><circle cx="68" cy="65" r="5" fill="#7f1d1d"/><circle cx="86" cy="65" r="5" fill="#3f0d10"/>
+  <text x="290" y="70" text-anchor="middle" class="mw" fill="#9aa4b2" style="font-size:12px">~/n0zzzy/whoami.yaml</text>
+  <text x="56" y="104" class="mw"><tspan fill="#dc2626">name</tspan><tspan fill="#9aa4b2">:</tspan><tspan fill="#fca5a5"> &quot;Russel Carlo&quot;</tspan></text><text x="56" y="123" class="mw"><tspan fill="#dc2626">handle</tspan><tspan fill="#9aa4b2">:</tspan><tspan fill="#fca5a5"> &quot;n0zzzy&quot;</tspan></text><text x="56" y="142" class="mw"><tspan fill="#dc2626">based_in</tspan><tspan fill="#9aa4b2">:</tspan><tspan fill="#fca5a5"> &quot;Philippines&quot;</tspan></text><text x="56" y="161" class="mw"><tspan fill="#dc2626">school</tspan><tspan fill="#9aa4b2">:</tspan><tspan fill="#fca5a5"> &quot;NU Fairview · Information Technology&quot;</tspan></text><text x="56" y="190" class="mw"><tspan fill="#dc2626">certified</tspan><tspan fill="#9aa4b2">:</tspan></text><text x="74" y="209" class="mw"><tspan fill="#dc2626">- </tspan><tspan fill="#f0f6fc">AWS Certified AI Practitioner</tspan></text><text x="74" y="228" class="mw"><tspan fill="#dc2626">- </tspan><tspan fill="#f0f6fc">Microsoft Fabric Data Engineer Assoc.</tspan></text><text x="56" y="257" class="mw"><tspan fill="#dc2626">building</tspan><tspan fill="#9aa4b2">:</tspan></text><text x="74" y="276" class="mw"><tspan fill="#dc2626">- </tspan><tspan fill="#f0f6fc">AI agents on Bedrock AgentCore</tspan></text><text x="74" y="295" class="mw"><tspan fill="#dc2626">- </tspan><tspan fill="#f0f6fc">Azure AI Foundry agents</tspan></text><text x="74" y="314" class="mw"><tspan fill="#dc2626">- </tspan><tspan fill="#f0f6fc">Cloud infra with Terraform + EKS</tspan></text><text x="74" y="333" class="mw"><tspan fill="#dc2626">- </tspan><tspan fill="#f0f6fc">Full-stack &amp; mobile apps</tspan></text><text x="56" y="358" class="mw"><tspan fill="#dc2626">philosophy</tspan><tspan fill="#9aa4b2">:</tspan><tspan fill="#fca5a5"> "I have no enemies."</tspan></text><rect class="blinkw" x="318" y="345" width="9" height="16" fill="#dc2626"/>
+  <text x="580" y="78" class="tagw">// CURRENTLY</text><rect x="580" y="98" width="390" height="34" rx="6" fill="#0d1117" fill-opacity="0.85" stroke="#dc2626" stroke-opacity="0.18"/><text x="594" y="120" style="font: 15px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif">🥇</text><text x="624" y="120" style="font: 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif"><tspan fill="#f0f6fc" font-weight="700">Rank 1 Overall</tspan><tspan fill="#9aa4b2"> · AWS QuickQuest Finale</tspan></text><rect x="580" y="142" width="390" height="34" rx="6" fill="#0d1117" fill-opacity="0.85" stroke="#dc2626" stroke-opacity="0.18"/><text x="594" y="164" style="font: 15px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif">🎓</text><text x="624" y="164" style="font: 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif"><tspan fill="#f0f6fc" font-weight="700">AWS AI &amp; ML Scholar</tspan><tspan fill="#9aa4b2"> · top 4,500 globally</tspan></text><rect x="580" y="186" width="390" height="34" rx="6" fill="#0d1117" fill-opacity="0.85" stroke="#dc2626" stroke-opacity="0.18"/><text x="594" y="208" style="font: 15px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif">🤖</text><text x="624" y="208" style="font: 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif"><tspan fill="#f0f6fc" font-weight="700">Shipping multi-agent systems</tspan><tspan fill="#9aa4b2"> on AWS</tspan></text><rect x="580" y="230" width="390" height="34" rx="6" fill="#0d1117" fill-opacity="0.85" stroke="#dc2626" stroke-opacity="0.18"/><text x="594" y="252" style="font: 15px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif">☸️</text><text x="624" y="252" style="font: 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif"><tspan fill="#f0f6fc" font-weight="700">Running AI agents</tspan><tspan fill="#9aa4b2"> on Kubernetes (EKS)</tspan></text><rect x="580" y="274" width="390" height="34" rx="6" fill="#0d1117" fill-opacity="0.85" stroke="#dc2626" stroke-opacity="0.18"/><text x="594" y="296" style="font: 15px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif">🔁</text><text x="624" y="296" style="font: 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif"><tspan fill="#f0f6fc" font-weight="700">Automating everything</tspan><tspan fill="#9aa4b2"> with GitHub Actions</tspan></text><rect x="580" y="318" width="390" height="34" rx="6" fill="#0d1117" fill-opacity="0.85" stroke="#dc2626" stroke-opacity="0.18"/><text x="594" y="340" style="font: 15px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif">📱</text><text x="624" y="340" style="font: 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif"><tspan fill="#f0f6fc" font-weight="700">Building web + mobile</tspan><tspan fill="#9aa4b2"> (PWA) apps</tspan></text>
+</g>
+<rect x="0.5" y="0.5" width="999" height="409" rx="10" fill="none" stroke="#dc2626" stroke-opacity="0.45" class="pulsew"/>
+<g stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="square">
+  <path d="M2 20 V2 H20"/><path d="M980 2 H998 V20"/>
+  <path d="M2 390 V408 H20"/><path d="M980 408 H998 V390"/>
+</g>
+<text x="22" y="28" class="tagw">SYS://WHOAMI</text>
+</svg>

@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="330" height="340" viewBox="0 0 330 340">
+<defs>
+  <linearGradient id="bgv1" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#06080c"/><stop offset="0.6" stop-color="#0b0a10"/><stop offset="1" stop-color="#1c0609"/>
+  </linearGradient>
+  <radialGradient id="glowv1" cx="1" cy="0" r="0.9">
+    <stop offset="0" stop-color="#dc2626" stop-opacity="0.28"/><stop offset="1" stop-color="#dc2626" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="gridv1" width="26" height="26" patternUnits="userSpaceOnUse">
+    <path d="M26 0 L0 0 0 26" fill="none" stroke="#dc2626" stroke-opacity="0.07"/>
+  </pattern>
+  <pattern id="scanv1" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="#000" fill-opacity="0.35"/>
+  </pattern>
+  <clipPath id="clipv1"><rect width="330" height="340" rx="10"/></clipPath>
+  <style>
+    .tv1 { font: 700 17px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc; }
+    .bv1 { font: 400 13.5px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #9aa4b2; }
+    .mv1 { font: 500 13px 'Fira Code', Consolas, 'Courier New', monospace; }
+    .tagv1 { font: 600 11px 'Fira Code', Consolas, 'Courier New', monospace; fill: #dc2626; letter-spacing: 2px; }
+    .sweepv1 { animation: swv1 5s linear infinite; }
+    @keyframes swv1 { from { transform: translateY(-40px); } to { transform: translateY(380px); } }
+    .blinkv1 { animation: blv1 1s steps(1) infinite; }
+    @keyframes blv1 { 50% { opacity: 0; } }
+    .pulsev1 { animation: puv1 2.6s ease-in-out infinite; }
+    @keyframes puv1 { 50% { stroke-opacity: 0.25; } }
+  </style>
+</defs>
+<g clip-path="url(#clipv1)">
+  <rect width="330" height="340" fill="url(#bgv1)"/>
+  <rect width="330" height="340" fill="url(#gridv1)"/>
+  <rect width="330" height="340" fill="url(#glowv1)"/>
+  <rect width="330" height="340" fill="url(#scanv1)"/>
+  <rect class="sweepv1" width="330" height="40" fill="#dc2626" fill-opacity="0.05"/>
+  
+  <rect x="16" y="44" width="298" height="280" rx="8" fill="#0d1117" fill-opacity="0.9" stroke="#dc2626" stroke-opacity="0.22"/>
+  <polygon points="165.0,52.0 194.4,69.0 194.4,103.0 165.0,120.0 135.6,103.0 135.6,69.0" fill="none" stroke="#dc2626" stroke-width="2" class="pulsev1"/>
+  <polygon points="165.0,59.0 188.4,72.5 188.4,99.5 165.0,113.0 141.6,99.5 141.6,72.5" fill="#dc2626"/>
+  <text x="165.0" y="94" text-anchor="middle" style="font: 900 22px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #fff">1ST</text>
+  <text x="165.0" y="140" text-anchor="middle" class="tv1">RANK 1 OVERALL</text><text x="165.0" y="162" text-anchor="middle" class="tv1">+ Best in Technical Solution</text><text x="165.0" y="192" text-anchor="middle" class="mv1" fill="#fca5a5" style="font-size:11.5px">QuickQuest Finale: Build Responsibly ·</text><text x="165.0" y="209" text-anchor="middle" class="mv1" fill="#fca5a5" style="font-size:11.5px">AWS Office, BGC</text><text x="165.0" y="234" text-anchor="middle" class="bv1">Team EPIC 2 built an AI-powered Deployment</text><text x="165.0" y="253" text-anchor="middle" class="bv1">Checklist Bot on Amazon Quick Suite: 50+</text><text x="165.0" y="272" text-anchor="middle" class="bv1">checkpoints across 9 release domains</text>
+  <rect x="103.0" y="290" width="124" height="28" rx="14" fill="#1a0507" stroke="#dc2626"/>
+  <text x="165.0" y="309" text-anchor="middle" class="mv1" fill="#fca5a5" style="font-size:12px; font-weight:700">VIEW POST ▸</text>
+</g>
+<rect x="0.5" y="0.5" width="329" height="339" rx="10" fill="none" stroke="#dc2626" stroke-opacity="0.45" class="pulsev1"/>
+<g stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="square">
+  <path d="M2 20 V2 H20"/><path d="M310 2 H328 V20"/>
+  <path d="M2 320 V338 H20"/><path d="M310 338 H328 V320"/>
+</g>
+<text x="22" y="28" class="tagv1">WIN://01</text>
+</svg>

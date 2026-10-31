@@ -13,102 +13,24 @@
 
 <br/>
 
-<table>
-<tr>
-<td width="55%" valign="top">
-
-### 🐺 whoami
-
-```yaml
-name: Russel Carlo
-handle: n0zzzy
-based_in: Philippines 🇵🇭
-school: NU Fairview — Information Technology
-
-certified:
-  - AWS Certified AI Practitioner
-  - Microsoft Fabric Data Engineer Associate
-
-building:
-  - AI agents on AWS Bedrock AgentCore
-  - Azure AI Foundry multi-tool agents
-  - Cloud infra with Terraform + EKS
-  - Full-stack & mobile apps
-
-philosophy: "I have no enemies."
-```
-
-</td>
-<td width="45%" valign="top">
-
-### ⚡ Currently
-
-- 🥇 **Rank 1 Overall** — AWS QuickQuest Finale
-- 🎓 **AWS AI & ML Scholar** (top 4,500 globally)
-- 🤖 Shipping **multi-agent systems** on AWS
-- ☸️ Running **AI agents on Kubernetes (EKS)**
-- 🔁 Automating everything with **GitHub Actions**
-- 📱 Building **web + mobile (PWA)** apps
-
-</td>
-</tr>
-</table>
+<img src="./assets/panel-whoami.svg" width="100%" alt="whoami: Russel Carlo, NU Fairview IT, AWS Certified AI Practitioner, Microsoft Fabric Data Engineer Associate" />
 
 ### 🏆 Wins
 
-<table>
-<tr>
-<td align="center" width="33%" valign="top">
-<h1>🥇</h1>
-<b>RANK 1 OVERALL</b><br/>
-<b>+ Best in Technical Solution</b><br/>
-<sub>Capstone on Quick! QuickQuest Finale: Build Responsibly — <b>AWS Office, BGC</b></sub><br/><br/>
-<sub>Team EPIC 2 built an AI-powered <b>Deployment Checklist Bot</b> on Amazon Quick Suite: 50+ validation checkpoints across 9 release domains</sub><br/><br/>
-<a href="https://www.linkedin.com/feed/update/urn:li:activity:7496833769048276992/"><img src="https://img.shields.io/badge/View_post-0d1117?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2RjMjYyNiI%2BPGNpcmNsZSBjeD0iNS4yIiBjeT0iNS4yIiByPSIyLjQiLz48cmVjdCB4PSIzIiB5PSI5IiB3aWR0aD0iNC40IiBoZWlnaHQ9IjEyIi8%2BPHBhdGggZD0iTTEwIDloNC4ydjEuOGMuNi0xLjEgMi0yLjEgNC0yLjEgNCAwIDQuOCAyLjYgNC44IDZWMjFoLTQuNHYtNS42YzAtMS40IDAtMy4xLTEuOS0zLjFzLTIuMiAxLjUtMi4yIDNWMjFIMTB6Ii8%2BPC9zdmc%2B" /></a>
-</td>
-<td align="center" width="33%" valign="top">
-<h1>🥈</h1>
-<b>2ND PLACE</b><br/>
-<b>Kiro Agent Orchestration Hackathon</b><br/>
-<sub>AI Playgrounds — <b>eCloudvalley Philippines, BGC</b></sub><br/><br/>
-<sub>Built software end-to-end with <b>agent orchestration</b> using Kiro, from SDLC to AIDLC</sub><br/><br/>
-<a href="https://www.linkedin.com/feed/update/urn:li:activity:7502561620263481344/"><img src="https://img.shields.io/badge/View_post-0d1117?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2RjMjYyNiI%2BPGNpcmNsZSBjeD0iNS4yIiBjeT0iNS4yIiByPSIyLjQiLz48cmVjdCB4PSIzIiB5PSI5IiB3aWR0aD0iNC40IiBoZWlnaHQ9IjEyIi8%2BPHBhdGggZD0iTTEwIDloNC4ydjEuOGMuNi0xLjEgMi0yLjEgNC0yLjEgNCAwIDQuOCAyLjYgNC44IDZWMjFoLTQuNHYtNS42YzAtMS40IDAtMy4xLTEuOS0zLjFzLTIuMiAxLjUtMi4yIDNWMjFIMTB6Ii8%2BPC9zdmc%2B" /></a>
-</td>
-<td align="center" width="33%" valign="top">
-<h1>🏅</h1>
-<b>4TH PLACE</b><br/>
-<b>EdTek Con 2026 AI Hackathon</b><br/>
-<sub>Mission LearnPossible 2 — representing <b>NU Fairview</b></sub><br/><br/>
-<sub>Built <b>Linaw</b>, an AI-powered, privacy-first anti-bullying companion for students</sub><br/><br/>
-<a href="https://www.linkedin.com/feed/update/urn:li:activity:7518483801849651200/"><img src="https://img.shields.io/badge/View_post-0d1117?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2RjMjYyNiI%2BPGNpcmNsZSBjeD0iNS4yIiBjeT0iNS4yIiByPSIyLjQiLz48cmVjdCB4PSIzIiB5PSI5IiB3aWR0aD0iNC40IiBoZWlnaHQ9IjEyIi8%2BPHBhdGggZD0iTTEwIDloNC4ydjEuOGMuNi0xLjEgMi0yLjEgNC0yLjEgNCAwIDQuOCAyLjYgNC44IDZWMjFoLTQuNHYtNS42YzAtMS40IDAtMy4xLTEuOS0zLjFzLTIuMiAxLjUtMi4yIDNWMjFIMTB6Ii8%2BPC9zdmc%2B" /></a>
-</td>
-</tr>
-</table>
+<p align="center">
+<a href="https://www.linkedin.com/feed/update/urn:li:activity:7496833769048276992/"><img src="./assets/win-1.svg" width="32%" alt="Rank 1 Overall + Best in Technical Solution: QuickQuest Finale at AWS Office BGC" /></a>
+<a href="https://www.linkedin.com/feed/update/urn:li:activity:7502561620263481344/"><img src="./assets/win-2.svg" width="32%" alt="2nd Place: Kiro Agent Orchestration Hackathon" /></a>
+<a href="https://www.linkedin.com/feed/update/urn:li:activity:7518483801849651200/"><img src="./assets/win-3.svg" width="32%" alt="4th Place: EdTek Con 2026 AI Hackathon" /></a>
+</p>
 
 ### 📜 Certifications & Programs
 
-<table>
-<tr>
-<td align="center" width="50%" valign="top">
-<a href="https://www.linkedin.com/feed/update/urn:li:activity:7510666348230799360/"><img src="https://img.shields.io/badge/AWS_Certified-AI_Practitioner-dc2626?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZmZmZiI%2BPHBhdGggZD0iTTYuNSAyMGE0LjUgNC41IDAgMCAxLS43LTguOTVBNi4yIDYuMiAwIDAgMSAxNy43IDkuMyA1LjQgNS40IDAgMCAxIDE4IDIweiIvPjwvc3ZnPg%3D%3D&labelColor=0d1117" /></a><br/>
-<sub><b>AIF-C01</b><br/>GenAI, Bedrock, SageMaker, Responsible AI</sub>
-</td>
-<td align="center" width="50%" valign="top">
-<a href="https://www.linkedin.com/feed/update/urn:li:activity:7510175401642586112/"><img src="https://img.shields.io/badge/Microsoft_Certified-Fabric_Data_Engineer-dc2626?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZmZmZiI%2BPHJlY3QgeD0iMiIgeT0iMiIgd2lkdGg9IjkuNSIgaGVpZ2h0PSI5LjUiLz48cmVjdCB4PSIxMi41IiB5PSIyIiB3aWR0aD0iOS41IiBoZWlnaHQ9IjkuNSIvPjxyZWN0IHg9IjIiIHk9IjEyLjUiIHdpZHRoPSI5LjUiIGhlaWdodD0iOS41Ii8%2BPHJlY3QgeD0iMTIuNSIgeT0iMTIuNSIgd2lkdGg9IjkuNSIgaGVpZ2h0PSI5LjUiLz48L3N2Zz4%3D&labelColor=0d1117" /></a><br/>
-<sub><b>DP-700 · Associate</b><br/>ETL/ELT, Lakehouse, real-time analytics</sub>
-</td>
-</tr>
-<tr>
-<td align="center" width="50%" valign="top">
-<a href="https://www.linkedin.com/feed/update/urn:li:activity:7517789317419765761/"><img src="https://img.shields.io/badge/Udacity-Future_AWS_Agent_Engineer-dc2626?style=for-the-badge&logo=udacity&logoColor=white&labelColor=0d1117" /></a><br/>
-<sub><b>Nanodegree · AWS AI & ML Scholar</b><br/>Top 4,500 scholars globally</sub>
-</td>
-<td align="center" width="50%" valign="top">
-<a href="https://www.linkedin.com/feed/update/urn:li:activity:7510118883748495360/"><img src="https://img.shields.io/badge/BeSA-Agentic_AI_PoC_→_Prod-dc2626?style=for-the-badge&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2ZmZmZmZiI%2BPHBhdGggZD0iTTYuNSAyMGE0LjUgNC41IDAgMCAxLS43LTguOTVBNi4yIDYuMiAwIDAgMSAxNy43IDkuMyA1LjQgNS40IDAgMCAxIDE4IDIweiIvPjwvc3ZnPg%3D%3D&labelColor=0d1117" /></a><br/>
-<sub><b>6-week technical track</b><br/>Production agentic AI on AWS</sub>
-</td>
-</tr>
-</table>
+<p align="center">
+<a href="https://www.linkedin.com/feed/update/urn:li:activity:7510666348230799360/"><img src="./assets/cert-aws.svg" width="49%" alt="AWS Certified AI Practitioner (AIF-C01)" /></a>
+<a href="https://www.linkedin.com/feed/update/urn:li:activity:7510175401642586112/"><img src="./assets/cert-ms.svg" width="49%" alt="Microsoft Certified: Fabric Data Engineer Associate (DP-700)" /></a>
+<a href="https://www.linkedin.com/feed/update/urn:li:activity:7517789317419765761/"><img src="./assets/cert-udacity.svg" width="49%" alt="Udacity Future AWS Agent Engineer Nanodegree" /></a>
+<a href="https://www.linkedin.com/feed/update/urn:li:activity:7510118883748495360/"><img src="./assets/cert-besa.svg" width="49%" alt="BeSA Agentic AI: PoC to Production on AWS" /></a>
+</p>
 
 ### 🛠️ Arsenal
 
