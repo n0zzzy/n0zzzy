@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="490" height="220" viewBox="0 0 490 220">
+<defs>
+  <linearGradient id="bgb2" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#06080c"/><stop offset="0.6" stop-color="#0b0a10"/><stop offset="1" stop-color="#1c0609"/>
+  </linearGradient>
+  <radialGradient id="glowb2" cx="1" cy="0" r="0.9">
+    <stop offset="0" stop-color="#dc2626" stop-opacity="0.28"/><stop offset="1" stop-color="#dc2626" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="gridb2" width="26" height="26" patternUnits="userSpaceOnUse">
+    <path d="M26 0 L0 0 0 26" fill="none" stroke="#dc2626" stroke-opacity="0.07"/>
+  </pattern>
+  <pattern id="scanb2" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="#000" fill-opacity="0.35"/>
+  </pattern>
+  <clipPath id="clipb2"><rect width="490" height="220" rx="10"/></clipPath>
+  <style>
+    .tb2 { font: 700 17px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc; }
+    .bb2 { font: 400 13.5px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #9aa4b2; }
+    .mb2 { font: 500 13px 'Fira Code', Consolas, 'Courier New', monospace; }
+    .tagb2 { font: 600 11px 'Fira Code', Consolas, 'Courier New', monospace; fill: #dc2626; letter-spacing: 2px; }
+    .sweepb2 { animation: swb2 5s linear infinite; }
+    @keyframes swb2 { from { transform: translateY(-40px); } to { transform: translateY(260px); } }
+    .blinkb2 { animation: blb2 1s steps(1) infinite; }
+    @keyframes blb2 { 50% { opacity: 0; } }
+    .pulseb2 { animation: pub2 2.6s ease-in-out infinite; }
+    @keyframes pub2 { 50% { stroke-opacity: 0.25; } }
+  </style>
+</defs>
+<g clip-path="url(#clipb2)">
+  <rect width="490" height="220" fill="url(#bgb2)"/>
+  <rect width="490" height="220" fill="url(#gridb2)"/>
+  <rect width="490" height="220" fill="url(#glowb2)"/>
+  <rect width="490" height="220" fill="url(#scanb2)"/>
+  <rect class="sweepb2" width="490" height="40" fill="#dc2626" fill-opacity="0.05"/>
+  
+  <rect x="16" y="44" width="458" height="160" rx="8" fill="#0d1117" fill-opacity="0.9" stroke="#dc2626" stroke-opacity="0.22"/>
+  <text x="34" y="80" style="font: 700 18px 'Fira Code', Consolas, 'Courier New', monospace; fill: #f0f6fc">novamart-multi-agent-agentcore</text>
+  <text x="34" y="110" class="bb2">5-agent customer support with parallel multi-agent RAG,</text><text x="34" y="130" class="bb2">guardrails, shared state, and CloudWatch/X-Ray</text><text x="34" y="150" class="bb2">observability on Bedrock AgentCore.</text>
+  <rect x="34" y="168" width="66" height="24" rx="12" fill="#1a0507" stroke="#dc2626" stroke-opacity=".7"/><text x="67" y="184" text-anchor="middle" class="mb2" fill="#fca5a5" style="font-size:11.5px; font-weight:600">Python</text><rect x="108" y="168" width="89" height="24" rx="12" fill="#1a0507" stroke="#dc2626" stroke-opacity=".7"/><text x="153" y="184" text-anchor="middle" class="mb2" fill="#fca5a5" style="font-size:11.5px; font-weight:600">AgentCore</text><rect x="205" y="168" width="74" height="24" rx="12" fill="#1a0507" stroke="#dc2626" stroke-opacity=".7"/><text x="242" y="184" text-anchor="middle" class="mb2" fill="#fca5a5" style="font-size:11.5px; font-weight:600">Strands</text><rect x="287" y="168" width="44" height="24" rx="12" fill="#1a0507" stroke="#dc2626" stroke-opacity=".7"/><text x="309" y="184" text-anchor="middle" class="mb2" fill="#fca5a5" style="font-size:11.5px; font-weight:600">RAG</text>
+  <text x="456" y="184" text-anchor="end" class="mb2" fill="#fca5a5" style="font-size:11px; font-weight:700">OPEN ▸</text>
+  
+</g>
+<rect x="0.5" y="0.5" width="489" height="219" rx="10" fill="none" stroke="#dc2626" stroke-opacity="0.45" class="pulseb2"/>
+<g stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="square">
+  <path d="M2 20 V2 H20"/><path d="M470 2 H488 V20"/>
+  <path d="M2 200 V218 H20"/><path d="M470 218 H488 V200"/>
+</g>
+<text x="22" y="28" class="tagb2">BUILD://02</text>
+</svg>

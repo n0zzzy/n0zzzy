@@ -15,7 +15,7 @@
 
 <img src="./assets/panel-whoami.svg" width="100%" alt="whoami: Russel Carlo, NU Fairview IT, AWS Certified AI Practitioner, Microsoft Fabric Data Engineer Associate" />
 
-### 🏆 Wins
+<img src="./assets/h-wins.svg" width="100%" alt="Wins" />
 
 <p align="center">
 <a href="https://www.linkedin.com/feed/update/urn:li:activity:7496833769048276992/"><img src="./assets/win-1.svg" width="32%" alt="Rank 1 Overall + Best in Technical Solution: QuickQuest Finale at AWS Office BGC" /></a>
@@ -23,7 +23,7 @@
 <a href="https://www.linkedin.com/feed/update/urn:li:activity:7518483801849651200/"><img src="./assets/win-3.svg" width="32%" alt="4th Place: EdTek Con 2026 AI Hackathon" /></a>
 </p>
 
-### 📜 Certifications & Programs
+<img src="./assets/h-certs.svg" width="100%" alt="Certifications & Programs" />
 
 <p align="center">
 <a href="https://www.linkedin.com/feed/update/urn:li:activity:7510666348230799360/"><img src="./assets/cert-aws.svg" width="49%" alt="AWS Certified AI Practitioner (AIF-C01)" /></a>
@@ -32,72 +32,24 @@
 <a href="https://www.linkedin.com/feed/update/urn:li:activity:7510118883748495360/"><img src="./assets/cert-besa.svg" width="49%" alt="BeSA Agentic AI: PoC to Production on AWS" /></a>
 </p>
 
-### 🛠️ Arsenal
+<img src="./assets/h-arsenal.svg" width="100%" alt="Arsenal" />
 
-<div align="center">
+<img src="./assets/panel-arsenal.svg" width="100%" alt="Tech stack: AWS, Azure, Docker, Kubernetes, Terraform, GitHub Actions, Linux, Python, TypeScript, JavaScript, Kotlin, React, Next.js, Tailwind, Node.js, Express, PostgreSQL, MongoDB, Firebase, Vercel" />
 
-<img src="https://skillicons.dev/icons?i=aws,azure,docker,kubernetes,terraform,githubactions,linux&theme=dark" /><br/>
-<img src="https://skillicons.dev/icons?i=python,ts,js,kotlin,react,nextjs,tailwind&theme=dark" /><br/>
-<img src="https://skillicons.dev/icons?i=nodejs,express,postgres,mongodb,firebase,vercel,figma&theme=dark" />
+<img src="./assets/h-builds.svg" width="100%" alt="Featured Builds" />
 
-</div>
-
-### 🚀 Featured Builds
-
-<table>
-<tr>
-<td width="50%" valign="top">
-
-**[🤖 kiro-sdlc-agent-harness](https://github.com/n0zzzy/kiro-sdlc-agent-harness)** 👑<br/>
-<sub>An orchestrator drives <b>7 specialist AI agents</b> through the full SDLC, from a plain-English request to a <b>live, deployed AWS app</b>, with human approval gates</sub><br/>
-<img src="https://img.shields.io/badge/Kiro-0d1117?style=flat-square" /> <img src="https://img.shields.io/badge/Multi--Agent-0d1117?style=flat-square&logo=robotframework&logoColor=dc2626" /> <img src="https://img.shields.io/badge/AWS-0d1117?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2RjMjYyNiI%2BPHBhdGggZD0iTTYuNSAyMGE0LjUgNC41IDAgMCAxLS43LTguOTVBNi4yIDYuMiAwIDAgMSAxNy43IDkuMyA1LjQgNS40IDAgMCAxIDE4IDIweiIvPjwvc3ZnPg%3D%3D" />
-
-</td>
-<td width="50%" valign="top">
-
-**[🧠 novamart-multi-agent-agentcore](https://github.com/n0zzzy/novamart-multi-agent-agentcore)**<br/>
-<sub><b>5-agent</b> customer support with <b>parallel multi-agent RAG</b>, guardrails, shared state & CloudWatch/X-Ray observability on Bedrock AgentCore</sub><br/>
-<img src="https://img.shields.io/badge/Python-0d1117?style=flat-square&logo=python&logoColor=dc2626" /> <img src="https://img.shields.io/badge/AgentCore-0d1117?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2RjMjYyNiI%2BPHBhdGggZD0iTTYuNSAyMGE0LjUgNC41IDAgMCAxLS43LTguOTVBNi4yIDYuMiAwIDAgMSAxNy43IDkuMyA1LjQgNS40IDAgMCAxIDE4IDIweiIvPjwvc3ZnPg%3D%3D" />
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-**[☸️ production-ready-ai-agents-eks](https://github.com/n0zzzy/production-ready-ai-agents-eks)**<br/>
-<sub>Enterprise AI agent platform on <b>EKS + Bedrock</b>: self-managed vs managed tracks, model-agnostic <b>LiteLLM</b> plane</sub><br/>
-<img src="https://img.shields.io/badge/Kubernetes-0d1117?style=flat-square&logo=kubernetes&logoColor=dc2626" /> <img src="https://img.shields.io/badge/Terraform-0d1117?style=flat-square&logo=terraform&logoColor=dc2626" />
-
-</td>
-<td width="50%" valign="top">
-
-**[🛰️ cloudops-sentry](https://github.com/n0zzzy/cloudops-sentry)**<br/>
-<sub><b>Autonomous DevOps & SRE agent</b> that prevents incidents before they happen. Built for the DevKada x Clanker Cloud challenge</sub><br/>
-<img src="https://img.shields.io/badge/Python-0d1117?style=flat-square&logo=python&logoColor=dc2626" /> <img src="https://img.shields.io/badge/AI_Agent-0d1117?style=flat-square&logo=robotframework&logoColor=dc2626" />
-
-</td>
-</tr>
-<tr>
-<td width="50%" valign="top">
-
-**[💬 ai-customer-support-agent](https://github.com/n0zzzy/ai-customer-support-agent)**<br/>
-<sub>Support agent with <b>order tracking & refunds via Gateway/Lambda</b>, RAG, Code Interpreter, web browsing & long-term memory</sub><br/>
-<img src="https://img.shields.io/badge/Strands_SDK-0d1117?style=flat-square&logo=python&logoColor=dc2626" /> <img src="https://img.shields.io/badge/Lambda-0d1117?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2RjMjYyNiI%2BPHBhdGggZD0iTTYuNSAyMGE0LjUgNC41IDAgMCAxLS43LTguOTVBNi4yIDYuMiAwIDAgMSAxNy43IDkuMyA1LjQgNS40IDAgMCAxIDE4IDIweiIvPjwvc3ZnPg%3D%3D" />
-
-</td>
-<td width="50%" valign="top">
-
-**[🐾 pawfeed-smart-pet-feeder](https://github.com/n0zzzy/pawfeed-smart-pet-feeder)**<br/>
-<sub>Smart pet feeder <b>web + PWA</b> with Playwright tests, Allure reports & CI/CD. <a href="https://pawfeed-smart-pet-feeder.vercel.app"><b>Live demo →</b></a></sub><br/>
-<img src="https://img.shields.io/badge/Playwright-0d1117?style=flat-square&logo=data%3Aimage%2Fsvg%2Bxml%3Bbase64%2CPHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0iI2RjMjYyNiI%2BPHBhdGggZD0iTTYgM2wxNSA5LTE1IDl6Ii8%2BPC9zdmc%2B" /> <img src="https://img.shields.io/badge/Vercel-0d1117?style=flat-square&logo=vercel&logoColor=dc2626" />
-
-</td>
-</tr>
-</table>
+<p align="center">
+<a href="https://github.com/n0zzzy/kiro-sdlc-agent-harness"><img src="./assets/build-1.svg" width="49%" alt="kiro-sdlc-agent-harness" /></a>
+<a href="https://github.com/n0zzzy/novamart-multi-agent-agentcore"><img src="./assets/build-2.svg" width="49%" alt="novamart-multi-agent-agentcore" /></a>
+<a href="https://github.com/n0zzzy/production-ready-ai-agents-eks"><img src="./assets/build-3.svg" width="49%" alt="production-ready-ai-agents-eks" /></a>
+<a href="https://github.com/n0zzzy/cloudops-sentry"><img src="./assets/build-4.svg" width="49%" alt="cloudops-sentry" /></a>
+<a href="https://github.com/n0zzzy/ai-customer-support-agent"><img src="./assets/build-5.svg" width="49%" alt="ai-customer-support-agent" /></a>
+<a href="https://github.com/n0zzzy/pawfeed-smart-pet-feeder"><img src="./assets/build-6.svg" width="49%" alt="pawfeed-smart-pet-feeder" /></a>
+</p>
 
 <p align="center"><sub><b>More builds:</b> <a href="https://github.com/n0zzzy/aws-eks-workshop">☸️ EKS + Karpenter lab</a> · <a href="https://github.com/n0zzzy/azure-ai-foundry-multitool-agent">🔷 Azure AI Foundry agent</a> · <a href="https://github.com/n0zzzy/aws-bedrock-customer-support-flow">🔁 Bedrock Flows router</a> · <a href="https://github.com/n0zzzy/kiro-ph-data-dashboard">🌊 PH flood control dashboard</a> · <a href="https://github.com/n0zzzy/aws-multi-agent-orchestration">🎛️ Step Functions orchestration</a> · <a href="https://github.com/n0zzzy/aws-multi-agent-choreography">🔀 EventBridge choreography</a></sub></p>
 
-### 📊 Stats
+<img src="./assets/h-stats.svg" width="100%" alt="Stats" />
 
 <div align="center">
 

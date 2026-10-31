@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="490" height="220" viewBox="0 0 490 220">
+<defs>
+  <linearGradient id="bgb3" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#06080c"/><stop offset="0.6" stop-color="#0b0a10"/><stop offset="1" stop-color="#1c0609"/>
+  </linearGradient>
+  <radialGradient id="glowb3" cx="1" cy="0" r="0.9">
+    <stop offset="0" stop-color="#dc2626" stop-opacity="0.28"/><stop offset="1" stop-color="#dc2626" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="gridb3" width="26" height="26" patternUnits="userSpaceOnUse">
+    <path d="M26 0 L0 0 0 26" fill="none" stroke="#dc2626" stroke-opacity="0.07"/>
+  </pattern>
+  <pattern id="scanb3" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="#000" fill-opacity="0.35"/>
+  </pattern>
+  <clipPath id="clipb3"><rect width="490" height="220" rx="10"/></clipPath>
+  <style>
+    .tb3 { font: 700 17px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc; }
+    .bb3 { font: 400 13.5px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #9aa4b2; }
+    .mb3 { font: 500 13px 'Fira Code', Consolas, 'Courier New', monospace; }
+    .tagb3 { font: 600 11px 'Fira Code', Consolas, 'Courier New', monospace; fill: #dc2626; letter-spacing: 2px; }
+    .sweepb3 { animation: swb3 5s linear infinite; }
+    @keyframes swb3 { from { transform: translateY(-40px); } to { transform: translateY(260px); } }
+    .blinkb3 { animation: blb3 1s steps(1) infinite; }
+    @keyframes blb3 { 50% { opacity: 0; } }
+    .pulseb3 { animation: pub3 2.6s ease-in-out infinite; }
+    @keyframes pub3 { 50% { stroke-opacity: 0.25; } }
+  </style>
+</defs>
+<g clip-path="url(#clipb3)">
+  <rect width="490" height="220" fill="url(#bgb3)"/>
+  <rect width="490" height="220" fill="url(#gridb3)"/>
+  <rect width="490" height="220" fill="url(#glowb3)"/>
+  <rect width="490" height="220" fill="url(#scanb3)"/>
+  <rect class="sweepb3" width="490" height="40" fill="#dc2626" fill-opacity="0.05"/>
+  
+  <rect x="16" y="44" width="458" height="160" rx="8" fill="#0d1117" fill-opacity="0.9" stroke="#dc2626" stroke-opacity="0.22"/>
+  <text x="34" y="80" style="font: 700 18px 'Fira Code', Consolas, 'Courier New', monospace; fill: #f0f6fc">production-ready-ai-agents-eks</text>
+  <text x="34" y="110" class="bb3">Enterprise AI agent platform on EKS + Bedrock:</text><text x="34" y="130" class="bb3">self-managed vs managed tracks behind a model-agnostic</text><text x="34" y="150" class="bb3">LiteLLM plane.</text>
+  <rect x="34" y="168" width="44" height="24" rx="12" fill="#1a0507" stroke="#dc2626" stroke-opacity=".7"/><text x="56" y="184" text-anchor="middle" class="mb3" fill="#fca5a5" style="font-size:11.5px; font-weight:600">EKS</text><rect x="86" y="168" width="96" height="24" rx="12" fill="#1a0507" stroke="#dc2626" stroke-opacity=".7"/><text x="134" y="184" text-anchor="middle" class="mb3" fill="#fca5a5" style="font-size:11.5px; font-weight:600">Kubernetes</text><rect x="190" y="168" width="74" height="24" rx="12" fill="#1a0507" stroke="#dc2626" stroke-opacity=".7"/><text x="227" y="184" text-anchor="middle" class="mb3" fill="#fca5a5" style="font-size:11.5px; font-weight:600">LiteLLM</text><rect x="272" y="168" width="89" height="24" rx="12" fill="#1a0507" stroke="#dc2626" stroke-opacity=".7"/><text x="316" y="184" text-anchor="middle" class="mb3" fill="#fca5a5" style="font-size:11.5px; font-weight:600">Terraform</text>
+  <text x="456" y="184" text-anchor="end" class="mb3" fill="#fca5a5" style="font-size:11px; font-weight:700">OPEN ▸</text>
+  
+</g>
+<rect x="0.5" y="0.5" width="489" height="219" rx="10" fill="none" stroke="#dc2626" stroke-opacity="0.45" class="pulseb3"/>
+<g stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="square">
+  <path d="M2 20 V2 H20"/><path d="M470 2 H488 V20"/>
+  <path d="M2 200 V218 H20"/><path d="M470 218 H488 V200"/>
+</g>
+<text x="22" y="28" class="tagb3">BUILD://03</text>
+</svg>

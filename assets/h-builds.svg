@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="64" viewBox="0 0 1000 64">
+<defs>
+  <linearGradient id="lnhbuilds" x1="0" x2="1"><stop offset="0" stop-color="#dc2626"/><stop offset="1" stop-color="#dc2626" stop-opacity="0"/></linearGradient>
+  <linearGradient id="shinehbuilds" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <style>
+    .shhbuilds { animation: shhbuilds 4s ease-in-out infinite; }
+    @keyframes shhbuilds { from { transform: translateX(-120px); } to { transform: translateX(1000px); } }
+    .blhbuilds { animation: blhbuilds 1.2s steps(1) infinite; }
+    @keyframes blhbuilds { 50% { opacity: 0; } }
+  </style>
+</defs>
+<rect x="0" y="14" width="8" height="36" fill="#dc2626"/>
+<rect x="12" y="14" width="3" height="36" fill="#dc2626" fill-opacity=".5"/>
+<text x="30" y="43" style="font: 800 28px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc; letter-spacing: 3px">FEATURED BUILDS</text>
+<rect class="blhbuilds" x="372" y="22" width="12" height="24" fill="#dc2626"/>
+<rect x="402" y="33" width="538" height="2" fill="url(#lnhbuilds)"/>
+<rect class="shhbuilds" x="0" y="32" width="120" height="4" fill="url(#shinehbuilds)" opacity=".55"/>
+<text x="996" y="40" text-anchor="end" style="font: 600 12px 'Fira Code', Consolas, 'Courier New', monospace; fill: #dc2626; letter-spacing: 2px">// 04</text>
+</svg>

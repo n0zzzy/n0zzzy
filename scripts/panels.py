@@ -166,8 +166,92 @@ def cert(key, icon, issuer, title, code, desc):
     return frame(w, h, f"CERT://{key.upper()}", body, u)
 
 
+def heading(key, title, num):
+    w, h, u = 1000, 64, f"h{key}"
+    tw = sum(10 if ch == " " else 23 for ch in title)
+    return f'''<svg xmlns="http://www.w3.org/2000/svg" width="{w}" height="{h}" viewBox="0 0 {w} {h}">
+<defs>
+  <linearGradient id="ln{u}" x1="0" x2="1"><stop offset="0" stop-color="{RED}"/><stop offset="1" stop-color="{RED}" stop-opacity="0"/></linearGradient>
+  <linearGradient id="shine{u}" x1="0" x2="1"><stop offset="0" stop-color="#fff" stop-opacity="0"/><stop offset=".5" stop-color="#fff" stop-opacity=".9"/><stop offset="1" stop-color="#fff" stop-opacity="0"/></linearGradient>
+  <style>
+    .sh{u} {{ animation: sh{u} 4s ease-in-out infinite; }}
+    @keyframes sh{u} {{ from {{ transform: translateX(-120px); }} to {{ transform: translateX({w}px); }} }}
+    .bl{u} {{ animation: bl{u} 1.2s steps(1) infinite; }}
+    @keyframes bl{u} {{ 50% {{ opacity: 0; }} }}
+  </style>
+</defs>
+<rect x="0" y="14" width="8" height="36" fill="{RED}"/>
+<rect x="12" y="14" width="3" height="36" fill="{RED}" fill-opacity=".5"/>
+<text x="30" y="43" style="font: 800 28px {FONT}; fill: {TEXT}; letter-spacing: 3px">{escape(title.upper())}</text>
+<rect class="bl{u}" x="{30 + tw + 10}" y="22" width="12" height="24" fill="{RED}"/>
+<rect x="{30 + tw + 40}" y="33" width="{w - 130 - tw}" height="2" fill="url(#ln{u})"/>
+<rect class="sh{u}" x="0" y="32" width="120" height="4" fill="url(#shine{u})" opacity=".55"/>
+<text x="{w - 4}" y="40" text-anchor="end" style="font: 600 12px {MONO}; fill: {RED}; letter-spacing: 2px">// {num}</text>
+</svg>'''
+
+
+def build(n, repo, desc, chips, featured=False):
+    w, h, u = 490, 220, f"b{n}"
+    lines = "".join(f'<text x="34" y="{110 + i * 20}" class="b{u}">{escape(t)}</text>' for i, t in enumerate(wrap(desc, 58)[:3]))
+    x, chip_svg = 34, ""
+    for c in chips:
+        cw = len(c) * 7.4 + 22
+        chip_svg += (f'<rect x="{x:.0f}" y="{h - 52}" width="{cw:.0f}" height="24" rx="12" fill="#1a0507" stroke="{RED}" stroke-opacity=".7"/>'
+                     f'<text x="{x + cw / 2:.0f}" y="{h - 36}" text-anchor="middle" class="m{u}" fill="{PINK}" style="font-size:11.5px; font-weight:600">{escape(c)}</text>')
+        x += cw + 8
+    crown = (f'<rect x="{w - 132}" y="16" width="112" height="22" rx="4" fill="{RED}"/>'
+             f'<text x="{w - 76}" y="31" text-anchor="middle" style="font: 800 11px {MONO}; fill: #fff; letter-spacing: 1.5px">★ FLAGSHIP</text>') if featured else ""
+    body = f'''
+  <rect x="16" y="44" width="{w - 32}" height="{h - 60}" rx="8" fill="#0d1117" fill-opacity="0.9" stroke="{RED}" stroke-opacity="{.6 if featured else .22}"/>
+  <text x="34" y="80" style="font: 700 18px {MONO}; fill: {TEXT}">{escape(repo)}</text>
+  {lines}
+  {chip_svg}
+  <text x="{w - 34}" y="{h - 36}" text-anchor="end" class="m{u}" fill="{PINK}" style="font-size:11px; font-weight:700">OPEN ▸</text>
+  {crown}'''
+    return frame(w, h, f"BUILD://0{n}", body, u)
+
+
+ARSENAL = [
+    ("CLOUD / DEVOPS", ["aws", "azure", "docker", "kubernetes", "terraform", "githubactions", "linux"]),
+    ("LANGUAGES", ["python", "ts", "js", "kotlin", "html", "css"]),
+    ("FRONTEND / MOBILE", ["react", "nextjs", "tailwind", "androidstudio", "figma"]),
+    ("BACKEND / DATA", ["nodejs", "express", "postgres", "mongodb", "firebase", "vercel"]),
+]
+
+
+def arsenal():
+    import base64
+    import urllib.request
+    w, u = 1000, "ars"
+    size, gap, top, row_h = 52, 14, 62, 78
+    h = top + len(ARSENAL) * row_h + 10
+    rows = []
+    for i, (label, icons) in enumerate(ARSENAL):
+        y = top + i * row_h
+        rows.append(f'<rect x="24" y="{y}" width="{w - 48}" height="{row_h - 12}" rx="8" fill="#0d1117" fill-opacity="0.9" stroke="{RED}" stroke-opacity="0.2"/>')
+        rows.append(f'<text x="44" y="{y + row_h / 2}" class="tag{u}" style="font-size:12px">{label}</text>')
+        for j, name in enumerate(icons):
+            req = urllib.request.Request(f"https://skillicons.dev/icons?i={name}&theme=dark", headers={"User-Agent": "Mozilla/5.0"})
+            data = base64.b64encode(urllib.request.urlopen(req, timeout=20).read()).decode()
+            x = 250 + j * (size + gap)
+            rows.append(f'<image x="{x}" y="{y + (row_h - 12 - size) / 2}" width="{size}" height="{size}" href="data:image/svg+xml;base64,{data}"/>')
+    return frame(w, h, "SYS://ARSENAL", "".join(rows), u)
+
+
 def main():
     files = {
+        "h-wins.svg": heading("wins", "Wins", "01"),
+        "h-certs.svg": heading("certs", "Certifications", "02"),
+        "h-arsenal.svg": heading("ars", "Arsenal", "03"),
+        "h-builds.svg": heading("builds", "Featured Builds", "04"),
+        "h-stats.svg": heading("stats", "Stats", "05"),
+        "panel-arsenal.svg": arsenal(),
+        "build-1.svg": build(1, "kiro-sdlc-agent-harness", "An orchestrator drives 7 specialist AI agents through the full SDLC, from a plain-English request to a live, deployed AWS app, with human approval gates.", ["Kiro", "Multi-Agent", "AWS", "Terraform"], True),
+        "build-2.svg": build(2, "novamart-multi-agent-agentcore", "5-agent customer support with parallel multi-agent RAG, guardrails, shared state, and CloudWatch/X-Ray observability on Bedrock AgentCore.", ["Python", "AgentCore", "Strands", "RAG"]),
+        "build-3.svg": build(3, "production-ready-ai-agents-eks", "Enterprise AI agent platform on EKS + Bedrock: self-managed vs managed tracks behind a model-agnostic LiteLLM plane.", ["EKS", "Kubernetes", "LiteLLM", "Terraform"]),
+        "build-4.svg": build(4, "cloudops-sentry", "Autonomous DevOps & SRE agent that prevents incidents before they happen. Built for the DevKada x Clanker Cloud challenge.", ["Python", "AI Agent", "SRE"]),
+        "build-5.svg": build(5, "ai-customer-support-agent", "Support agent with order tracking & refunds via Gateway/Lambda, RAG, Code Interpreter, web browsing, and long-term memory.", ["Strands", "AgentCore", "Lambda"]),
+        "build-6.svg": build(6, "pawfeed-smart-pet-feeder", "Smart pet feeder web + installable PWA with Playwright tests, Allure reports, and CI/CD to Vercel. Live demo available.", ["PWA", "Playwright", "Allure", "Vercel"]),
         "panel-whoami.svg": whoami(),
         "win-1.svg": win(1, "1ST", "RANK 1 OVERALL", "+ Best in Technical Solution",
                          "QuickQuest Finale: Build Responsibly · AWS Office, BGC",

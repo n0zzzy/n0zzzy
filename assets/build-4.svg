@@ -1,0 +1,49 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="490" height="220" viewBox="0 0 490 220">
+<defs>
+  <linearGradient id="bgb4" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#06080c"/><stop offset="0.6" stop-color="#0b0a10"/><stop offset="1" stop-color="#1c0609"/>
+  </linearGradient>
+  <radialGradient id="glowb4" cx="1" cy="0" r="0.9">
+    <stop offset="0" stop-color="#dc2626" stop-opacity="0.28"/><stop offset="1" stop-color="#dc2626" stop-opacity="0"/>
+  </radialGradient>
+  <pattern id="gridb4" width="26" height="26" patternUnits="userSpaceOnUse">
+    <path d="M26 0 L0 0 0 26" fill="none" stroke="#dc2626" stroke-opacity="0.07"/>
+  </pattern>
+  <pattern id="scanb4" width="4" height="4" patternUnits="userSpaceOnUse">
+    <rect width="4" height="1" fill="#000" fill-opacity="0.35"/>
+  </pattern>
+  <clipPath id="clipb4"><rect width="490" height="220" rx="10"/></clipPath>
+  <style>
+    .tb4 { font: 700 17px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #f0f6fc; }
+    .bb4 { font: 400 13.5px 'Segoe UI', Ubuntu, 'Helvetica Neue', sans-serif; fill: #9aa4b2; }
+    .mb4 { font: 500 13px 'Fira Code', Consolas, 'Courier New', monospace; }
+    .tagb4 { font: 600 11px 'Fira Code', Consolas, 'Courier New', monospace; fill: #dc2626; letter-spacing: 2px; }
+    .sweepb4 { animation: swb4 5s linear infinite; }
+    @keyframes swb4 { from { transform: translateY(-40px); } to { transform: translateY(260px); } }
+    .blinkb4 { animation: blb4 1s steps(1) infinite; }
+    @keyframes blb4 { 50% { opacity: 0; } }
+    .pulseb4 { animation: pub4 2.6s ease-in-out infinite; }
+    @keyframes pub4 { 50% { stroke-opacity: 0.25; } }
+  </style>
+</defs>
+<g clip-path="url(#clipb4)">
+  <rect width="490" height="220" fill="url(#bgb4)"/>
+  <rect width="490" height="220" fill="url(#gridb4)"/>
+  <rect width="490" height="220" fill="url(#glowb4)"/>
+  <rect width="490" height="220" fill="url(#scanb4)"/>
+  <rect class="sweepb4" width="490" height="40" fill="#dc2626" fill-opacity="0.05"/>
+  
+  <rect x="16" y="44" width="458" height="160" rx="8" fill="#0d1117" fill-opacity="0.9" stroke="#dc2626" stroke-opacity="0.22"/>
+  <text x="34" y="80" style="font: 700 18px 'Fira Code', Consolas, 'Courier New', monospace; fill: #f0f6fc">cloudops-sentry</text>
+  <text x="34" y="110" class="bb4">Autonomous DevOps &amp; SRE agent that prevents incidents</text><text x="34" y="130" class="bb4">before they happen. Built for the DevKada x Clanker Cloud</text><text x="34" y="150" class="bb4">challenge.</text>
+  <rect x="34" y="168" width="66" height="24" rx="12" fill="#1a0507" stroke="#dc2626" stroke-opacity=".7"/><text x="67" y="184" text-anchor="middle" class="mb4" fill="#fca5a5" style="font-size:11.5px; font-weight:600">Python</text><rect x="108" y="168" width="81" height="24" rx="12" fill="#1a0507" stroke="#dc2626" stroke-opacity=".7"/><text x="149" y="184" text-anchor="middle" class="mb4" fill="#fca5a5" style="font-size:11.5px; font-weight:600">AI Agent</text><rect x="198" y="168" width="44" height="24" rx="12" fill="#1a0507" stroke="#dc2626" stroke-opacity=".7"/><text x="220" y="184" text-anchor="middle" class="mb4" fill="#fca5a5" style="font-size:11.5px; font-weight:600">SRE</text>
+  <text x="456" y="184" text-anchor="end" class="mb4" fill="#fca5a5" style="font-size:11px; font-weight:700">OPEN ▸</text>
+  
+</g>
+<rect x="0.5" y="0.5" width="489" height="219" rx="10" fill="none" stroke="#dc2626" stroke-opacity="0.45" class="pulseb4"/>
+<g stroke="#dc2626" stroke-width="3" fill="none" stroke-linecap="square">
+  <path d="M2 20 V2 H20"/><path d="M470 2 H488 V20"/>
+  <path d="M2 200 V218 H20"/><path d="M470 218 H488 V200"/>
+</g>
+<text x="22" y="28" class="tagb4">BUILD://04</text>
+</svg>
