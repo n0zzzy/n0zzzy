@@ -14,6 +14,9 @@
 
 <br/>
 
+<p align="center"><b>I'm not the fastest coder in the room. I design the systems around AI so agents ship safely.</b><br/>
+<sub>architecture · guardrails · evals · human-in-the-loop · <a href="https://russelcarlo.vercel.app/kiro-harness">read the Kiro harness case study →</a></sub></p>
+
 <img src="./assets/panel-whoami-v2.svg" width="100%" alt="whoami: Russel Carlo, NU Fairview IT, AWS Certified AI Practitioner, Microsoft Fabric Data Engineer Associate" />
 
 <img src="./assets/panel-achievements.svg" width="100%" alt="Achievements unlocked: Hackathon Champion, AWS Certified, Microsoft Certified, AWS AI & ML Scholar, Multi-Agent Architect, Agentic Coder" />
