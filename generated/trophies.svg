@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="990" height="215" viewBox="0 0 990 215">
+<style>
+  .t { font: 600 16px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #dc2626; }
+  .l { font: 400 13px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #8b949e; }
+  .v { font: 700 14px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #e6edf3; }
+  .big { font: 800 40px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #e6edf3; }
+  .fade { animation: fade .6s ease-out; }
+  @keyframes fade { from { opacity: 0; transform: translateX(-6px); } to { opacity: 1; transform: none; } }
+  @keyframes grow { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  @keyframes ring { from { stroke-dashoffset: 251; } }
+</style>
+<rect x="0.5" y="0.5" width="989" height="214" rx="10" fill="#0d1117" stroke="#30363d"/>
+<rect x="0.5" y="0.5" width="4" height="214" rx="2" fill="#dc2626"/>
+<text x="25" y="34" class="t">trophies</text>
+<style>.glow { animation: glow 2.5s ease-in-out infinite; } @keyframes glow { 50% { stroke-opacity: .3; } }</style>
+<g transform="translate(95, 105)">
+  <polygon points="0.0,-44.0 38.1,-22.0 38.1,22.0 0.0,44.0 -38.1,22.0 -38.1,-22.0" fill="none" stroke="#dc2626" stroke-width="2" />
+  <polygon points="0.0,-36.0 31.2,-18.0 31.2,18.0 0.0,36.0 -31.2,18.0 -31.2,-18.0" fill="#450a0a"/>
+  <text y="11" text-anchor="middle" style="font: 900 30px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #ffffff">C</text>
+  <text y="68" text-anchor="middle" class="v">Contributor</text>
+  <text y="86" text-anchor="middle" class="l">72 contributions</text>
+</g>
+<g transform="translate(255, 105)">
+  <polygon points="0.0,-44.0 38.1,-22.0 38.1,22.0 0.0,44.0 -38.1,22.0 -38.1,-22.0" fill="none" stroke="#dc2626" stroke-width="2" />
+  <polygon points="0.0,-36.0 31.2,-18.0 31.2,18.0 0.0,36.0 -31.2,18.0 -31.2,-18.0" fill="#450a0a"/>
+  <text y="11" text-anchor="middle" style="font: 900 30px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #ffffff">C</text>
+  <text y="68" text-anchor="middle" class="v">Committer</text>
+  <text y="86" text-anchor="middle" class="l">51 commits</text>
+</g>
+<g transform="translate(415, 105)">
+  <polygon points="0.0,-44.0 38.1,-22.0 38.1,22.0 0.0,44.0 -38.1,22.0 -38.1,-22.0" fill="none" stroke="#dc2626" stroke-width="2" />
+  <polygon points="0.0,-36.0 31.2,-18.0 31.2,18.0 0.0,36.0 -31.2,18.0 -31.2,-18.0" fill="#7f1d1d"/>
+  <text y="11" text-anchor="middle" style="font: 900 30px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #ffffff">B</text>
+  <text y="68" text-anchor="middle" class="v">Builder</text>
+  <text y="86" text-anchor="middle" class="l">21 public repos</text>
+</g>
+<g transform="translate(575, 105)">
+  <polygon points="0.0,-44.0 38.1,-22.0 38.1,22.0 0.0,44.0 -38.1,22.0 -38.1,-22.0" fill="none" stroke="#dc2626" stroke-width="2" />
+  <polygon points="0.0,-36.0 31.2,-18.0 31.2,18.0 0.0,36.0 -31.2,18.0 -31.2,-18.0" fill="#b91c1c"/>
+  <text y="11" text-anchor="middle" style="font: 900 30px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #ffffff">A</text>
+  <text y="68" text-anchor="middle" class="v">Polyglot</text>
+  <text y="86" text-anchor="middle" class="l">9 languages</text>
+</g>
+<g transform="translate(735, 105)">
+  <polygon points="0.0,-44.0 38.1,-22.0 38.1,22.0 0.0,44.0 -38.1,22.0 -38.1,-22.0" fill="none" stroke="#dc2626" stroke-width="2" />
+  <polygon points="0.0,-36.0 31.2,-18.0 31.2,18.0 0.0,36.0 -31.2,18.0 -31.2,-18.0" fill="#7f1d1d"/>
+  <text y="11" text-anchor="middle" style="font: 900 30px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #ffffff">B</text>
+  <text y="68" text-anchor="middle" class="v">Veteran</text>
+  <text y="86" text-anchor="middle" class="l">4 years</text>
+</g>
+<g transform="translate(895, 105)">
+  <polygon points="0.0,-44.0 38.1,-22.0 38.1,22.0 0.0,44.0 -38.1,22.0 -38.1,-22.0" fill="none" stroke="#dc2626" stroke-width="2" />
+  <polygon points="0.0,-36.0 31.2,-18.0 31.2,18.0 0.0,36.0 -31.2,18.0 -31.2,-18.0" fill="#450a0a"/>
+  <text y="11" text-anchor="middle" style="font: 900 30px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #ffffff">C</text>
+  <text y="68" text-anchor="middle" class="v">Collaborator</text>
+  <text y="86" text-anchor="middle" class="l">1 pull requests</text>
+</g>
+</svg>
