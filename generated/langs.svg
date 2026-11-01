@@ -32,36 +32,36 @@
 <text x="25" y="32" class="t">most used languages</text>
 <defs><clipPath id="bar"><rect width="445" height="10" rx="5"/></clipPath></defs>
 <g transform="translate(25, 60)">
-  <g clip-path="url(#bar)"><g style="transform-origin: 0 0; animation: grow 1s ease-out"><rect x="0.00" y="0" width="185.07" height="10" fill="#3572A5"/><rect x="185.07" y="0" width="115.27" height="10" fill="#844FBA"/><rect x="300.34" y="0" width="54.31" height="10" fill="#f1e05a"/><rect x="354.66" y="0" width="49.73" height="10" fill="#3178c6"/><rect x="404.39" y="0" width="20.49" height="10" fill="#89e051"/><rect x="424.88" y="0" width="20.12" height="10" fill="#e34c26"/></g></g>
+  <g clip-path="url(#bar)"><g style="transform-origin: 0 0; animation: grow 1s ease-out"><rect x="0.00" y="0" width="180.30" height="10" fill="#3572A5"/><rect x="180.30" y="0" width="112.30" height="10" fill="#844FBA"/><rect x="292.61" y="0" width="59.09" height="10" fill="#f1e05a"/><rect x="351.69" y="0" width="48.45" height="10" fill="#3178c6"/><rect x="400.14" y="0" width="24.89" height="10" fill="#e34c26"/><rect x="425.04" y="0" width="19.96" height="10" fill="#89e051"/></g></g>
 </g>
 <g class="fade" transform="translate(25, 108)">
   <circle cx="5" cy="-4" r="5" fill="#3572A5"/>
   <text x="18" y="0" class="v">Python</text>
-  <text x="200" y="0" class="l" text-anchor="end">41.6%</text>
+  <text x="200" y="0" class="l" text-anchor="end">40.5%</text>
 </g>
 <g class="fade" transform="translate(255, 108)">
   <circle cx="5" cy="-4" r="5" fill="#844FBA"/>
   <text x="18" y="0" class="v">HCL</text>
-  <text x="200" y="0" class="l" text-anchor="end">25.9%</text>
+  <text x="200" y="0" class="l" text-anchor="end">25.2%</text>
 </g>
 <g class="fade" transform="translate(25, 136)">
   <circle cx="5" cy="-4" r="5" fill="#f1e05a"/>
   <text x="18" y="0" class="v">JavaScript</text>
-  <text x="200" y="0" class="l" text-anchor="end">12.2%</text>
+  <text x="200" y="0" class="l" text-anchor="end">13.3%</text>
 </g>
 <g class="fade" transform="translate(255, 136)">
   <circle cx="5" cy="-4" r="5" fill="#3178c6"/>
   <text x="18" y="0" class="v">TypeScript</text>
-  <text x="200" y="0" class="l" text-anchor="end">11.2%</text>
+  <text x="200" y="0" class="l" text-anchor="end">10.9%</text>
 </g>
 <g class="fade" transform="translate(25, 164)">
-  <circle cx="5" cy="-4" r="5" fill="#89e051"/>
-  <text x="18" y="0" class="v">Shell</text>
-  <text x="200" y="0" class="l" text-anchor="end">4.6%</text>
-</g>
-<g class="fade" transform="translate(255, 164)">
   <circle cx="5" cy="-4" r="5" fill="#e34c26"/>
   <text x="18" y="0" class="v">HTML</text>
+  <text x="200" y="0" class="l" text-anchor="end">5.6%</text>
+</g>
+<g class="fade" transform="translate(255, 164)">
+  <circle cx="5" cy="-4" r="5" fill="#89e051"/>
+  <text x="18" y="0" class="v">Shell</text>
   <text x="200" y="0" class="l" text-anchor="end">4.5%</text>
 </g>
 </svg>
