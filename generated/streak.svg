@@ -38,9 +38,9 @@
 </g>
 <g transform="translate(495, 0)">
   <rect x="-145" y="50" width="290" height="132" rx="8" fill="#0d1117" fill-opacity=".9" stroke="#dc2626" stroke-opacity="0.6"/>
-  <text y="126" text-anchor="middle" style="font: 800 48px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #dc2626">1</text>
+  <text y="126" text-anchor="middle" style="font: 800 48px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #dc2626">2</text>
   <text y="80" text-anchor="middle" style="font: 600 11px 'Fira Code', Consolas, monospace; fill: #fca5a5; letter-spacing: 2px">🔥 CURRENT STREAK</text>
-  <text y="160" text-anchor="middle" class="l">Nov 3, 2026</text>
+  <text y="160" text-anchor="middle" class="l">Nov 3, 2026 → Nov 4, 2026</text>
 </g>
 <g transform="translate(820, 0)">
   <rect x="-145" y="50" width="290" height="132" rx="8" fill="#0d1117" fill-opacity=".9" stroke="#dc2626" stroke-opacity="0.22"/>
