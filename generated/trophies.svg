@@ -32,11 +32,11 @@
 <text x="25" y="32" class="t">trophies</text>
 <style>.glow { animation: glow 2.5s ease-in-out infinite; } @keyframes glow { 50% { stroke-opacity: .3; } }</style>
 <g transform="translate(95, 105)">
-  <polygon points="0.0,-44.0 38.1,-22.0 38.1,22.0 0.0,44.0 -38.1,22.0 -38.1,-22.0" fill="none" stroke="#dc2626" stroke-width="2" />
-  <polygon points="0.0,-36.0 31.2,-18.0 31.2,18.0 0.0,36.0 -31.2,18.0 -31.2,-18.0" fill="#b91c1c"/>
-  <text y="11" text-anchor="middle" style="font: 900 30px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #ffffff">A</text>
+  <polygon points="0.0,-44.0 38.1,-22.0 38.1,22.0 0.0,44.0 -38.1,22.0 -38.1,-22.0" fill="none" stroke="#dc2626" stroke-width="2" class="glow"/>
+  <polygon points="0.0,-36.0 31.2,-18.0 31.2,18.0 0.0,36.0 -31.2,18.0 -31.2,-18.0" fill="#dc2626"/>
+  <text y="11" text-anchor="middle" style="font: 900 30px 'Segoe UI', Ubuntu, 'Helvetica Neue', Sans-Serif; fill: #ffffff">S</text>
   <text y="68" text-anchor="middle" class="v">Contributor</text>
-  <text y="86" text-anchor="middle" class="l">777 contributions</text>
+  <text y="86" text-anchor="middle" class="l">1,003 contributions</text>
 </g>
 <g transform="translate(255, 105)">
   <polygon points="0.0,-44.0 38.1,-22.0 38.1,22.0 0.0,44.0 -38.1,22.0 -38.1,-22.0" fill="none" stroke="#dc2626" stroke-width="2" />
